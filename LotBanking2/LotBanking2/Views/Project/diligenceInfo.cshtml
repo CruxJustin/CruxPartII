@@ -1,0 +1,123 @@
+﻿@model LotBanking2.viewmodels.proj_dilConnect
+
+@{
+    ViewBag.Title = "Create";
+}
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>dil_ent</legend>
+
+        @if(ViewBag.isEdit){
+        @Html.HiddenFor(model => model.project.dil_ent.projectid)
+        }
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.project.dil_ent.naos_comments)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.project.dil_ent.naos_comments)
+            @Html.ValidationMessageFor(model => model.project.dil_ent.naos_comments)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.project.dil_ent.naos_requirements)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.project.dil_ent.naos_requirements)
+            @Html.ValidationMessageFor(model => model.project.dil_ent.naos_requirements)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.project.dil_ent.restrictions_other)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.project.dil_ent.restrictions_other)
+            @Html.ValidationMessageFor(model => model.project.dil_ent.restrictions_other)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.project.dil_ent.plat_comments)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.project.dil_ent.plat_comments)
+            @Html.ValidationMessageFor(model => model.project.dil_ent.plat_comments)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.project.dil_ent.plat_status)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.project.dil_ent.plat_status)
+            @Html.ValidationMessageFor(model => model.project.dil_ent.plat_status)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.project.dil_ent.plat_final)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.project.dil_ent.plat_final)
+            @Html.ValidationMessageFor(model => model.project.dil_ent.plat_final)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.project.dil_ent.plat_stipulations)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.project.dil_ent.plat_stipulations)
+            @Html.ValidationMessageFor(model => model.project.dil_ent.plat_stipulations)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.project.dil_ent.zoning_designation_ordinance)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.project.dil_ent.zoning_designation_ordinance)
+            @Html.ValidationMessageFor(model => model.project.dil_ent.zoning_designation_ordinance)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.project.dil_ent.zoning_development_agreement)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.project.dil_ent.zoning_development_agreement)
+            @Html.ValidationMessageFor(model => model.project.dil_ent.zoning_development_agreement)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.project.dil_ent.zoning_jurisdiction_city)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.project.dil_ent.zoning_jurisdiction_city)
+            @Html.ValidationMessageFor(model => model.project.dil_ent.zoning_jurisdiction_city)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.project.dil_ent.zoning_stipulations)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.project.dil_ent.zoning_stipulations)
+            @Html.ValidationMessageFor(model => model.project.dil_ent.zoning_stipulations)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.project.dil_ent.zoning_vesting_status)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.project.dil_ent.zoning_vesting_status)
+            @Html.ValidationMessageFor(model => model.project.dil_ent.zoning_vesting_status)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.project.dil_ent.zoning_density)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.project.dil_ent.zoning_density)
+            @Html.ValidationMessageFor(model => model.project.dil_ent.zoning_density)
+        </div>
+
+    </fieldset>
+        
+}

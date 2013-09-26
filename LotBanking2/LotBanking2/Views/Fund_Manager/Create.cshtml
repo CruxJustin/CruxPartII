@@ -1,0 +1,91 @@
+﻿@model LotBanking2.Models.fund_manager
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>fund_manager</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fundid, "fund")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("fundid", String.Empty)
+            @Html.ValidationMessageFor(model => model.fundid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.legal_entity_name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.legal_entity_name)
+            @Html.ValidationMessageFor(model => model.legal_entity_name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.state_of_incorp)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.state_of_incorp)
+            @Html.ValidationMessageFor(model => model.state_of_incorp)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.tax_id)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.tax_id)
+            @Html.ValidationMessageFor(model => model.tax_id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.setup_date)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.setup_date)
+            @Html.ValidationMessageFor(model => model.setup_date)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.dissolution_date)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.dissolution_date)
+            @Html.ValidationMessageFor(model => model.dissolution_date)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.date_created)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.date_created)
+            @Html.ValidationMessageFor(model => model.date_created)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.date_modified)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.date_modified)
+            @Html.ValidationMessageFor(model => model.date_modified)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<LotBanking2.Models.project>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.builder.buildername)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.project_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.legal_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.subdivision_report)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_created)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_modified)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.builder.buildername)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.legal_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.subdivision_report)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_modified)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

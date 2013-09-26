@@ -1,0 +1,75 @@
+﻿@model LotBanking2.Models.diligence_utilities
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>diligence_utilities</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.projectid, "project")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("projectid", String.Empty)
+            @Html.ValidationMessageFor(model => model.projectid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.providerid, "utility_providers")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("providerid", String.Empty)
+            @Html.ValidationMessageFor(model => model.providerid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.notes)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.notes)
+            @Html.ValidationMessageFor(model => model.notes)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.agreement_service)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.agreement_service)
+            @Html.ValidationMessageFor(model => model.agreement_service)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.date_created)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.date_created)
+            @Html.ValidationMessageFor(model => model.date_created)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.date_modified)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.date_modified)
+            @Html.ValidationMessageFor(model => model.date_modified)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

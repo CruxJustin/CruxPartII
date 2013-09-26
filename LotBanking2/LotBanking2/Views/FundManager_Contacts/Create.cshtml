@@ -1,0 +1,51 @@
+﻿@model LotBanking2.Models.fundmanager_contacts
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>fundmanager_contacts</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fmanagerid, "fund")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("fmanagerid", String.Empty)
+            @Html.ValidationMessageFor(model => model.fmanagerid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.contactid, "contact")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("contactid", String.Empty)
+            @Html.ValidationMessageFor(model => model.contactid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.description)
+            @Html.ValidationMessageFor(model => model.description)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

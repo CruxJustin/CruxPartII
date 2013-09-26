@@ -1,0 +1,85 @@
+﻿@model LotBanking2.Models.diligence_hoa
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>diligence_hoa</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.project.name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.project.name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.formation_date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.formation_date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.formation_docs)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.formation_docs)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ccr_docs)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ccr_docs)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.reserve_study_docs)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.reserve_study_docs)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.turnover_date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.turnover_date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.annual_budget)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.annual_budget)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.unit_per_month)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.unit_per_month)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.date_created)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date_created)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.date_modified)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date_modified)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

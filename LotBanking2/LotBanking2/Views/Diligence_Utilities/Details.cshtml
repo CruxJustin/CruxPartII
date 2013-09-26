@@ -1,0 +1,57 @@
+﻿@model LotBanking2.Models.diligence_utilities
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>diligence_utilities</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.project.name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.project.name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.utility_providers.provider)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.utility_providers.provider)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.notes)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.notes)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.agreement_service)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.agreement_service)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.date_created)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date_created)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.date_modified)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date_modified)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,87 @@
+﻿@model IEnumerable<LotBanking2.Models.diligence_hoa>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.project.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.formation_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.formation_docs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ccr_docs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.reserve_study_docs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.turnover_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.annual_budget)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.unit_per_month)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_created)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_modified)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.project.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.formation_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.formation_docs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ccr_docs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.reserve_study_docs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.turnover_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.annual_budget)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.unit_per_month)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_modified)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

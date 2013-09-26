@@ -1,0 +1,123 @@
+﻿@model IEnumerable<LotBanking2.Models.fund_leverage>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fund.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.leverage_max_percentage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.debt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.interest_start)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.loan_fee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.appraisal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.closing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.interest_reserve)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.release_price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.total_budgeted_interest)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.interest_to_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estimated_balance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.current_balance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.debt_comments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_created)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_modified)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fund.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.leverage_max_percentage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.debt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.interest_start)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.loan_fee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.appraisal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.closing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.interest_reserve)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.release_price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.total_budgeted_interest)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.interest_to_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estimated_balance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.current_balance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.debt_comments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_modified)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,127 @@
+﻿@model LotBanking2.Models.diligence_ent
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>diligence_ent</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.project.name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.project.name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.naos_comments)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.naos_comments)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.naos_requirements)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.naos_requirements)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.restrictions_other)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.restrictions_other)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.plat_comments)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.plat_comments)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.plat_status)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.plat_status)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.plat_final)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.plat_final)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.plat_stipulations)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.plat_stipulations)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.zoning_designation_ordinance)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.zoning_designation_ordinance)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.zoning_development_agreement)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.zoning_development_agreement)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.zoning_jurisdiction_city)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.zoning_jurisdiction_city)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.zoning_stipulations)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.zoning_stipulations)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.zoning_vesting_status)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.zoning_vesting_status)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.zoning_density)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.zoning_density)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.date_created)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date_created)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.date_modified)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date_modified)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,36 @@
+﻿@model LotBanking2.Models.purchaseagreement_contacts
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>purchaseagreement_contacts</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.purchase_agreement.sellingentity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.purchase_agreement.sellingentity)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.contact.company)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.contact.company)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.description)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

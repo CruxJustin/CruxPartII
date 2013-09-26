@@ -1,0 +1,1631 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LotBankModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="LotBankModelStoreContainer">
+    <EntitySet Name="addresses" EntityType="LotBankModel.Store.addresses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Artisans" EntityType="LotBankModel.Store.Artisans" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="builder_comments" EntityType="LotBankModel.Store.builder_comments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="builder_contacts" EntityType="LotBankModel.Store.builder_contacts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="builders" EntityType="LotBankModel.Store.builders" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="comments" EntityType="LotBankModel.Store.comments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="company_types" EntityType="LotBankModel.Store.company_types" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="contacts" EntityType="LotBankModel.Store.contacts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="diligence_ent" EntityType="LotBankModel.Store.diligence_ent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="diligence_financial" EntityType="LotBankModel.Store.diligence_financial" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="diligence_hoa" EntityType="LotBankModel.Store.diligence_hoa" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="diligence_location" EntityType="LotBankModel.Store.diligence_location" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="diligence_plans" EntityType="LotBankModel.Store.diligence_plans" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="diligence_reports" EntityType="LotBankModel.Store.diligence_reports" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="diligence_title" EntityType="LotBankModel.Store.diligence_title" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="diligence_utilities" EntityType="LotBankModel.Store.diligence_utilities" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="emails" EntityType="LotBankModel.Store.emails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="entities" EntityType="LotBankModel.Store.entities" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="fund_comments" EntityType="LotBankModel.Store.fund_comments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="fund_leverage" EntityType="LotBankModel.Store.fund_leverage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="fund_manager" EntityType="LotBankModel.Store.fund_manager" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="fund_offering" EntityType="LotBankModel.Store.fund_offering" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="fundmanager_contacts" EntityType="LotBankModel.Store.fundmanager_contacts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="funds" EntityType="LotBankModel.Store.funds" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="funds_committed" EntityType="LotBankModel.Store.funds_committed" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="funds_invested" EntityType="LotBankModel.Store.funds_invested" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="funds_received" EntityType="LotBankModel.Store.funds_received" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="investor_contacts" EntityType="LotBankModel.Store.investor_contacts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="investor_types" EntityType="LotBankModel.Store.investor_types" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="investors" EntityType="LotBankModel.Store.investors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="master_planned_communities" EntityType="LotBankModel.Store.master_planned_communities" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="phones" EntityType="LotBankModel.Store.phones" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="plan_types" EntityType="LotBankModel.Store.plan_types" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="project_comments" EntityType="LotBankModel.Store.project_comments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="project_leverage" EntityType="LotBankModel.Store.project_leverage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="project_sizes" EntityType="LotBankModel.Store.project_sizes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="projects" EntityType="LotBankModel.Store.projects" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="purchase_agreement" EntityType="LotBankModel.Store.purchase_agreement" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="purchaseagreement_comments" EntityType="LotBankModel.Store.purchaseagreement_comments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="purchaseagreement_contacts" EntityType="LotBankModel.Store.purchaseagreement_contacts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="report_types" EntityType="LotBankModel.Store.report_types" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="trade_types" EntityType="LotBankModel.Store.trade_types" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="traderef" EntityType="LotBankModel.Store.traderef" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="types" EntityType="LotBankModel.Store.types" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="utility_providers" EntityType="LotBankModel.Store.utility_providers" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__addresses__conta__55F4C372" Association="LotBankModel.Store.FK__addresses__conta__55F4C372">
+      <End Role="contacts" EntitySet="contacts" />
+      <End Role="addresses" EntitySet="addresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__builder_c__build__70A8B9AE" Association="LotBankModel.Store.FK__builder_c__build__70A8B9AE">
+      <End Role="builders" EntitySet="builders" />
+      <End Role="builder_contacts" EntitySet="builder_contacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__builder_c__build__74794A92" Association="LotBankModel.Store.FK__builder_c__build__74794A92">
+      <End Role="builders" EntitySet="builders" />
+      <End Role="builder_comments" EntitySet="builder_comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__builder_c__comme__756D6ECB" Association="LotBankModel.Store.FK__builder_c__comme__756D6ECB">
+      <End Role="comments" EntitySet="comments" />
+      <End Role="builder_comments" EntitySet="builder_comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__builder_c__conta__719CDDE7" Association="LotBankModel.Store.FK__builder_c__conta__719CDDE7">
+      <End Role="contacts" EntitySet="contacts" />
+      <End Role="builder_contacts" EntitySet="builder_contacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__company_t__typei__3B0BC30C" Association="LotBankModel.Store.FK__company_t__typei__3B0BC30C">
+      <End Role="types" EntitySet="types" />
+      <End Role="company_types" EntitySet="company_types" />
+    </AssociationSet>
+    <AssociationSet Name="FK__diligence__plant__17C286CF" Association="LotBankModel.Store.FK__diligence__plant__17C286CF">
+      <End Role="plan_types" EntitySet="plan_types" />
+      <End Role="diligence_plans" EntitySet="diligence_plans" />
+    </AssociationSet>
+    <AssociationSet Name="FK__diligence__proje__1209AD79" Association="LotBankModel.Store.FK__diligence__proje__1209AD79">
+      <End Role="projects" EntitySet="projects" />
+      <End Role="diligence_reports" EntitySet="diligence_reports" />
+    </AssociationSet>
+    <AssociationSet Name="FK__diligence__proje__16CE6296" Association="LotBankModel.Store.FK__diligence__proje__16CE6296">
+      <End Role="projects" EntitySet="projects" />
+      <End Role="diligence_plans" EntitySet="diligence_plans" />
+    </AssociationSet>
+    <AssociationSet Name="FK__diligence__proje__1B9317B3" Association="LotBankModel.Store.FK__diligence__proje__1B9317B3">
+      <End Role="projects" EntitySet="projects" />
+      <End Role="diligence_title" EntitySet="diligence_title" />
+    </AssociationSet>
+    <AssociationSet Name="FK__diligence__proje__22401542" Association="LotBankModel.Store.FK__diligence__proje__22401542">
+      <End Role="projects" EntitySet="projects" />
+      <End Role="diligence_utilities" EntitySet="diligence_utilities" />
+    </AssociationSet>
+    <AssociationSet Name="FK__diligence__proje__2704CA5F" Association="LotBankModel.Store.FK__diligence__proje__2704CA5F">
+      <End Role="projects" EntitySet="projects" />
+      <End Role="diligence_location" EntitySet="diligence_location" />
+    </AssociationSet>
+    <AssociationSet Name="FK__diligence__proje__2AD55B43" Association="LotBankModel.Store.FK__diligence__proje__2AD55B43">
+      <End Role="projects" EntitySet="projects" />
+      <End Role="diligence_financial" EntitySet="diligence_financial" />
+    </AssociationSet>
+    <AssociationSet Name="FK__diligence__proje__318258D2" Association="LotBankModel.Store.FK__diligence__proje__318258D2">
+      <End Role="projects" EntitySet="projects" />
+      <End Role="diligence_ent" EntitySet="diligence_ent" />
+    </AssociationSet>
+    <AssociationSet Name="FK__diligence__proje__382F5661" Association="LotBankModel.Store.FK__diligence__proje__382F5661">
+      <End Role="projects" EntitySet="projects" />
+      <End Role="diligence_hoa" EntitySet="diligence_hoa" />
+    </AssociationSet>
+    <AssociationSet Name="FK__diligence__provi__2334397B" Association="LotBankModel.Store.FK__diligence__provi__2334397B">
+      <End Role="utility_providers" EntitySet="utility_providers" />
+      <End Role="diligence_utilities" EntitySet="diligence_utilities" />
+    </AssociationSet>
+    <AssociationSet Name="FK__diligence__repor__12FDD1B2" Association="LotBankModel.Store.FK__diligence__repor__12FDD1B2">
+      <End Role="report_types" EntitySet="report_types" />
+      <End Role="diligence_reports" EntitySet="diligence_reports" />
+    </AssociationSet>
+    <AssociationSet Name="FK__emails__contacti__59C55456" Association="LotBankModel.Store.FK__emails__contacti__59C55456">
+      <End Role="contacts" EntitySet="contacts" />
+      <End Role="emails" EntitySet="emails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__entities__invest__6D9742D9" Association="LotBankModel.Store.FK__entities__invest__6D9742D9">
+      <End Role="investors" EntitySet="investors" />
+      <End Role="entities" EntitySet="entities" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fund_comm__comme__753864A1" Association="LotBankModel.Store.FK__fund_comm__comme__753864A1">
+      <End Role="comments" EntitySet="comments" />
+      <End Role="fund_comments" EntitySet="fund_comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fund_comm__fundi__74444068" Association="LotBankModel.Store.FK__fund_comm__fundi__74444068">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="fund_comments" EntitySet="fund_comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fund_leve__fundi__5E54FF49" Association="LotBankModel.Store.FK__fund_leve__fundi__5E54FF49">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="fund_leverage" EntitySet="fund_leverage" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fund_mana__fundi__52E34C9D" Association="LotBankModel.Store.FK__fund_mana__fundi__52E34C9D">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="fund_manager" EntitySet="fund_manager" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fund_offe__fundi__5A846E65" Association="LotBankModel.Store.FK__fund_offe__fundi__5A846E65">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="fund_offering" EntitySet="fund_offering" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fundmanag__conta__56B3DD81" Association="LotBankModel.Store.FK__fundmanag__conta__56B3DD81">
+      <End Role="contacts" EntitySet="contacts" />
+      <End Role="fundmanager_contacts" EntitySet="fundmanager_contacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fundmanag__fmana__55BFB948" Association="LotBankModel.Store.FK__fundmanag__fmana__55BFB948">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="fundmanager_contacts" EntitySet="fundmanager_contacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__funds__companyty__3EDC53F0" Association="LotBankModel.Store.FK__funds__companyty__3EDC53F0">
+      <End Role="company_types" EntitySet="company_types" />
+      <End Role="funds" EntitySet="funds" />
+    </AssociationSet>
+    <AssociationSet Name="FK__funds_com__fundi__7908F585" Association="LotBankModel.Store.FK__funds_com__fundi__7908F585">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="funds_committed" EntitySet="funds_committed" />
+    </AssociationSet>
+    <AssociationSet Name="FK__funds_com__inves__79FD19BE" Association="LotBankModel.Store.FK__funds_com__inves__79FD19BE">
+      <End Role="investors" EntitySet="investors" />
+      <End Role="funds_committed" EntitySet="funds_committed" />
+    </AssociationSet>
+    <AssociationSet Name="FK__funds_inv__fundi__02925FBF" Association="LotBankModel.Store.FK__funds_inv__fundi__02925FBF">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="funds_invested" EntitySet="funds_invested" />
+    </AssociationSet>
+    <AssociationSet Name="FK__funds_inv__proje__038683F8" Association="LotBankModel.Store.FK__funds_inv__proje__038683F8">
+      <End Role="projects" EntitySet="projects" />
+      <End Role="funds_invested" EntitySet="funds_invested" />
+    </AssociationSet>
+    <AssociationSet Name="FK__funds_rec__fundi__7DCDAAA2" Association="LotBankModel.Store.FK__funds_rec__fundi__7DCDAAA2">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="funds_received" EntitySet="funds_received" />
+    </AssociationSet>
+    <AssociationSet Name="FK__funds_rec__inves__7EC1CEDB" Association="LotBankModel.Store.FK__funds_rec__inves__7EC1CEDB">
+      <End Role="investors" EntitySet="investors" />
+      <End Role="funds_received" EntitySet="funds_received" />
+    </AssociationSet>
+    <AssociationSet Name="FK__investor___conta__7167D3BD" Association="LotBankModel.Store.FK__investor___conta__7167D3BD">
+      <End Role="contacts" EntitySet="contacts" />
+      <End Role="investor_contacts" EntitySet="investor_contacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__investor___inves__7073AF84" Association="LotBankModel.Store.FK__investor___inves__7073AF84">
+      <End Role="investors" EntitySet="investors" />
+      <End Role="investor_contacts" EntitySet="investor_contacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__investor___typei__6501FCD8" Association="LotBankModel.Store.FK__investor___typei__6501FCD8">
+      <End Role="types" EntitySet="types" />
+      <End Role="investor_types" EntitySet="investor_types" />
+    </AssociationSet>
+    <AssociationSet Name="FK__investors__inves__68D28DBC" Association="LotBankModel.Store.FK__investors__inves__68D28DBC">
+      <End Role="investor_types" EntitySet="investor_types" />
+      <End Role="investors" EntitySet="investors" />
+    </AssociationSet>
+    <AssociationSet Name="FK__master_pl__build__0EF836A4" Association="LotBankModel.Store.FK__master_pl__build__0EF836A4">
+      <End Role="builders" EntitySet="builders" />
+      <End Role="master_planned_communities" EntitySet="master_planned_communities" />
+    </AssociationSet>
+    <AssociationSet Name="FK__phones__contacti__5D95E53A" Association="LotBankModel.Store.FK__phones__contacti__5D95E53A">
+      <End Role="contacts" EntitySet="contacts" />
+      <End Role="phones" EntitySet="phones" />
+    </AssociationSet>
+    <AssociationSet Name="FK__plan_type__typei__7B264821" Association="LotBankModel.Store.FK__plan_type__typei__7B264821">
+      <End Role="types" EntitySet="types" />
+      <End Role="plan_types" EntitySet="plan_types" />
+    </AssociationSet>
+    <AssociationSet Name="FK__project_c__comme__0E391C95" Association="LotBankModel.Store.FK__project_c__comme__0E391C95">
+      <End Role="comments" EntitySet="comments" />
+      <End Role="project_comments" EntitySet="project_comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__project_c__proje__0D44F85C" Association="LotBankModel.Store.FK__project_c__proje__0D44F85C">
+      <End Role="projects" EntitySet="projects" />
+      <End Role="project_comments" EntitySet="project_comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__project_l__proje__6225902D" Association="LotBankModel.Store.FK__project_l__proje__6225902D">
+      <End Role="projects" EntitySet="projects" />
+      <End Role="project_leverage" EntitySet="project_leverage" />
+    </AssociationSet>
+    <AssociationSet Name="FK__project_s__proje__0A688BB1" Association="LotBankModel.Store.FK__project_s__proje__0A688BB1">
+      <End Role="projects" EntitySet="projects" />
+      <End Role="project_sizes" EntitySet="project_sizes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__projects__builde__7FEAFD3E" Association="LotBankModel.Store.FK__projects__builde__7FEAFD3E">
+      <End Role="builders" EntitySet="builders" />
+      <End Role="projects" EntitySet="projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK__purchase___build__477199F1" Association="LotBankModel.Store.FK__purchase___build__477199F1">
+      <End Role="builders" EntitySet="builders" />
+      <End Role="purchase_agreement" EntitySet="purchase_agreement" />
+    </AssociationSet>
+    <AssociationSet Name="FK__purchase___fundi__4589517F" Association="LotBankModel.Store.FK__purchase___fundi__4589517F">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="purchase_agreement" EntitySet="purchase_agreement" />
+    </AssociationSet>
+    <AssociationSet Name="FK__purchase___proje__467D75B8" Association="LotBankModel.Store.FK__purchase___proje__467D75B8">
+      <End Role="projects" EntitySet="projects" />
+      <End Role="purchase_agreement" EntitySet="purchase_agreement" />
+    </AssociationSet>
+    <AssociationSet Name="FK__purchasea__agree__4A4E069C" Association="LotBankModel.Store.FK__purchasea__agree__4A4E069C">
+      <End Role="purchase_agreement" EntitySet="purchase_agreement" />
+      <End Role="purchaseagreement_contacts" EntitySet="purchaseagreement_contacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__purchasea__agree__4E1E9780" Association="LotBankModel.Store.FK__purchasea__agree__4E1E9780">
+      <End Role="purchase_agreement" EntitySet="purchase_agreement" />
+      <End Role="purchaseagreement_comments" EntitySet="purchaseagreement_comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__purchasea__comme__4F12BBB9" Association="LotBankModel.Store.FK__purchasea__comme__4F12BBB9">
+      <End Role="comments" EntitySet="comments" />
+      <End Role="purchaseagreement_comments" EntitySet="purchaseagreement_comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__purchasea__conta__4B422AD5" Association="LotBankModel.Store.FK__purchasea__conta__4B422AD5">
+      <End Role="contacts" EntitySet="contacts" />
+      <End Role="purchaseagreement_contacts" EntitySet="purchaseagreement_contacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__report_ty__typei__7849DB76" Association="LotBankModel.Store.FK__report_ty__typei__7849DB76">
+      <End Role="types" EntitySet="types" />
+      <End Role="report_types" EntitySet="report_types" />
+    </AssociationSet>
+    <AssociationSet Name="FK__trade_typ__typei__6442E2C9" Association="LotBankModel.Store.FK__trade_typ__typei__6442E2C9">
+      <End Role="types" EntitySet="types" />
+      <End Role="trade_types" EntitySet="trade_types" />
+    </AssociationSet>
+    <AssociationSet Name="FK__traderef__builde__6DCC4D03" Association="LotBankModel.Store.FK__traderef__builde__6DCC4D03">
+      <End Role="builders" EntitySet="builders" />
+      <End Role="traderef" EntitySet="traderef" />
+    </AssociationSet>
+    <AssociationSet Name="FK__traderef__tradet__6CD828CA" Association="LotBankModel.Store.FK__traderef__tradet__6CD828CA">
+      <End Role="trade_types" EntitySet="trade_types" />
+      <End Role="traderef" EntitySet="traderef" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MPC_Id" Association="LotBankModel.Store.FK_MPC_Id">
+      <End Role="master_planned_communities" EntitySet="master_planned_communities" />
+      <End Role="projects" EntitySet="projects" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="addresses">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="contactid" Type="int" Nullable="false" />
+    <Property Name="address1" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="address2" Type="varchar" MaxLength="255" />
+    <Property Name="address3" Type="varchar" MaxLength="255" />
+    <Property Name="city" Type="varchar" MaxLength="255" />
+    <Property Name="state" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="zipcode" Type="varchar" MaxLength="25" />
+    <Property Name="county" Type="varchar" MaxLength="255" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Artisans">
+    <Key>
+      <PropertyRef Name="ArtisanId" />
+    </Key>
+    <Property Name="ArtisanId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ArtisanName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="builder_comments">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="builderid" Type="int" Nullable="false" />
+    <Property Name="commentid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="builder_contacts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="builderid" Type="int" Nullable="false" />
+    <Property Name="contactid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="builders">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="buildername" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="optioneename" Type="varchar" MaxLength="255" />
+    <Property Name="contractorname" Type="varchar" MaxLength="255" />
+    <Property Name="website" Type="varchar" MaxLength="255" />
+    <Property Name="current_litigation" Type="tinyint" />
+    <Property Name="current_litigation_abstract" Type="text" />
+    <Property Name="past_litigation" Type="tinyint" />
+    <Property Name="past_litigation_abstract" Type="text" />
+    <Property Name="buildercol" Type="varchar" MaxLength="45" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="comments">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="comments" Type="text" Nullable="false" />
+    <Property Name="is_private" Type="tinyint" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="company_types">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="typeid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="contacts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="company" Type="varchar" MaxLength="255" />
+    <Property Name="title" Type="varchar" MaxLength="100" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="diligence_ent">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="projectid" Type="int" Nullable="false" />
+    <Property Name="naos_comments" Type="text" />
+    <Property Name="naos_requirements" Type="tinyint" />
+    <Property Name="restrictions_other" Type="text" />
+    <Property Name="plat_comments" Type="text" />
+    <Property Name="plat_status" Type="text" />
+    <Property Name="plat_final" Type="varchar" MaxLength="255" />
+    <Property Name="plat_stipulations" Type="text" />
+    <Property Name="zoning_designation_ordinance" Type="text" />
+    <Property Name="zoning_development_agreement" Type="tinyint" />
+    <Property Name="zoning_jurisdiction_city" Type="tinyint" />
+    <Property Name="zoning_stipulations" Type="varchar" MaxLength="255" />
+    <Property Name="zoning_vesting_status" Type="varchar" MaxLength="255" />
+    <Property Name="zoning_density" Type="varchar" MaxLength="255" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="diligence_financial">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="projectid" Type="int" Nullable="false" />
+    <Property Name="proforma_gross_margin" Type="varchar" MaxLength="255" />
+    <Property Name="proforma_net_margin" Type="varchar" MaxLength="255" />
+    <Property Name="model_sale_leaseback_investor" Type="varchar" MaxLength="255" />
+    <Property Name="tax_bill_current" Type="varchar" MaxLength="255" />
+    <Property Name="dev_budget_onsite" Type="int" />
+    <Property Name="dev_budget_offsite" Type="int" />
+    <Property Name="fees_impact" Type="varchar" MaxLength="255" />
+    <Property Name="fees_school" Type="varchar" MaxLength="255" />
+    <Property Name="fees_other" Type="varchar" MaxLength="255" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="diligence_hoa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="projectid" Type="int" Nullable="false" />
+    <Property Name="formation_date" Type="date" Nullable="false" />
+    <Property Name="formation_docs" Type="tinyint" />
+    <Property Name="ccr_docs" Type="tinyint" />
+    <Property Name="reserve_study_docs" Type="tinyint" />
+    <Property Name="turnover_date" Type="date" />
+    <Property Name="annual_budget" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="unit_per_month" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="diligence_location">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="projectid" Type="int" Nullable="false" />
+    <Property Name="legal_description" Type="text" />
+    <Property Name="middle_school" Type="varchar" MaxLength="255" />
+    <Property Name="other_school" Type="varchar" MaxLength="255" />
+    <Property Name="parcelno_assessor" Type="int" />
+    <Property Name="city" Type="varchar" MaxLength="255" />
+    <Property Name="state" Type="varchar" MaxLength="255" />
+    <Property Name="zipcode" Type="varchar" MaxLength="255" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="diligence_plans">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="projectid" Type="int" Nullable="false" />
+    <Property Name="plantypeid" Type="int" Nullable="false" />
+    <Property Name="notes" Type="text" Nullable="false" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="diligence_reports">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="projectid" Type="int" Nullable="false" />
+    <Property Name="reporttypeid" Type="int" Nullable="false" />
+    <Property Name="notes" Type="text" Nullable="false" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="diligence_title">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="projectid" Type="int" Nullable="false" />
+    <Property Name="survey_type" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="survey_date" Type="date" />
+    <Property Name="survey_preparer" Type="varchar" MaxLength="255" />
+    <Property Name="policy_issuer" Type="varchar" MaxLength="255" />
+    <Property Name="status" Type="varchar" MaxLength="255" />
+    <Property Name="escrow_officer" Type="varchar" MaxLength="255" />
+    <Property Name="underwriter" Type="varchar" MaxLength="255" />
+    <Property Name="other" Type="text" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="diligence_utilities">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="projectid" Type="int" Nullable="false" />
+    <Property Name="providerid" Type="int" Nullable="false" />
+    <Property Name="notes" Type="text" Nullable="false" />
+    <Property Name="agreement_service" Type="text" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="emails">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="contactid" Type="int" Nullable="false" />
+    <Property Name="type" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="email" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="entities">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="investorid" Type="int" Nullable="false" />
+    <Property Name="entity_name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="corporation_name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="tax_id" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="tax_exempt" Type="tinyint" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="fund_comments">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fundid" Type="int" Nullable="false" />
+    <Property Name="commentid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="fund_leverage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fundid" Type="int" Nullable="false" />
+    <Property Name="leverage_max_percentage" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="debt" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="interest_start" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="loan_fee" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="appraisal" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="closing" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="interest_reserve" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="release_price" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="total_budgeted_interest" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="interest_to_date" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="estimated_balance" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="current_balance" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="debt_comments" Type="text" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="fund_manager">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fundid" Type="int" Nullable="false" />
+    <Property Name="legal_entity_name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="state_of_incorp" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="tax_id" Type="varchar" MaxLength="50" />
+    <Property Name="setup_date" Type="date" />
+    <Property Name="dissolution_date" Type="date" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="fund_offering">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fundid" Type="int" Nullable="false" />
+    <Property Name="project_irr" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="project_wdp" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="project_irr_leveraged" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="project_wdp_leveraged" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="dquity_required" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="Pref_rate" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="hurdle_rate" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="split_to_hurdle" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="split_after_hurdle" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="participation_cbh" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="investor_irr_forecast" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="equity_comments" Type="text" />
+    <Property Name="underwriting_fee" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="management_fee_cbh" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="Management_fee_collected" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="cashflow_forecast" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="cashflow_actual" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="base_economics_comments" Type="text" />
+    <Property Name="ppm_date" Type="date" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="fundmanager_contacts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fmanagerid" Type="int" Nullable="false" />
+    <Property Name="contactid" Type="int" Nullable="false" />
+    <Property Name="description" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="funds">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="legal_name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="companytypeid" Type="int" />
+    <Property Name="formationdate" Type="date" />
+    <Property Name="federal_id" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="state_id" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="phone" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="zipcode" Type="varchar" MaxLength="20" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="funds_committed">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fundid" Type="int" Nullable="false" />
+    <Property Name="investorid" Type="int" Nullable="false" />
+    <Property Name="committed_amount" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="committed_date" Type="datetime" Nullable="false" />
+    <Property Name="details" Type="text" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="funds_invested">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fundid" Type="int" Nullable="false" />
+    <Property Name="projectid" Type="int" Nullable="false" />
+    <Property Name="invested_amount" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="invested_date" Type="datetime" Nullable="false" />
+    <Property Name="details" Type="text" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="funds_received">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fundid" Type="int" Nullable="false" />
+    <Property Name="investorid" Type="int" Nullable="false" />
+    <Property Name="received_amount" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="received_date" Type="datetime" Nullable="false" />
+    <Property Name="details" Type="text" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="investor_contacts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="investorid" Type="int" Nullable="false" />
+    <Property Name="contactid" Type="int" Nullable="false" />
+    <Property Name="description" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="investor_types">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="typeid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="investors">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="investortypeid" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="master_planned_communities">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="builderid" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="phones">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="contactid" Type="int" Nullable="false" />
+    <Property Name="type" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="phone" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="plan_types">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="typeid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="project_comments">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="projectid" Type="int" Nullable="false" />
+    <Property Name="commentid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="project_leverage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="projectid" Type="int" Nullable="false" />
+    <Property Name="leverage_max_percentage" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="debt" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="interest_start" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="loan_fee" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="appraisal" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="closing" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="interest_reserve" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="release_price" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="total_budgeted_interest" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="interest_to_date" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="estimated_balance" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="current_balance" Type="decimal" Nullable="false" Precision="25" Scale="2" />
+    <Property Name="debt_comments" Type="text" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="project_sizes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="projectid" Type="int" Nullable="false" />
+    <Property Name="parcel_acres" Type="int" Nullable="false" />
+    <Property Name="parcel_lots" Type="int" Nullable="false" />
+    <Property Name="lotsize_min" Type="int" Nullable="false" />
+    <Property Name="lotsize_max" Type="int" Nullable="false" />
+    <Property Name="setbacks_front" Type="int" Nullable="false" />
+    <Property Name="setbacks_rear" Type="int" Nullable="false" />
+    <Property Name="setbacks_side" Type="int" Nullable="false" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="projects">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="builderid" Type="int" Nullable="false" />
+    <Property Name="legal_name" Type="varchar" MaxLength="255" />
+    <Property Name="subdivision_report" Type="tinyint" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+    <Property Name="project_name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="project_number" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="number_of_lots" Type="int" />
+    <Property Name="acquisition_price" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="improvement_cost" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="total_cost_calc" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="roll_price" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="option_deposit_percent" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="option_deposit_calc" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="loan_to_cost_percent" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="loan_to_cost_calc" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="required_equity_calc" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="mpcid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="purchase_agreement">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fundid" Type="int" Nullable="false" />
+    <Property Name="projectid" Type="int" Nullable="false" />
+    <Property Name="builderid" Type="int" Nullable="false" />
+    <Property Name="purchasecontract" Type="tinyint" />
+    <Property Name="sellingentity" Type="varchar" MaxLength="255" />
+    <Property Name="sellingentitytype" Type="varchar" MaxLength="255" />
+    <Property Name="buyingentity" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="buyingentitytype" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="opendate" Type="date" />
+    <Property Name="closedate" Type="date" />
+    <Property Name="earnest_money" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="refundable" Type="tinyint" />
+    <Property Name="assignment" Type="tinyint" />
+    <Property Name="purchase_price" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="current_purchase_price" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="purchaseagreement_comments">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="agreementid" Type="int" Nullable="false" />
+    <Property Name="commentid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="purchaseagreement_contacts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="agreementid" Type="int" Nullable="false" />
+    <Property Name="contactid" Type="int" Nullable="false" />
+    <Property Name="description" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="report_types">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="typeid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trade_types">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="typeid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="traderef">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="builderid" Type="int" Nullable="false" />
+    <Property Name="tradetypeid" Type="int" Nullable="false" />
+    <Property Name="notes" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="types">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="utility_providers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="provider" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__addresses__conta__55F4C372">
+    <End Role="contacts" Type="LotBankModel.Store.contacts" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="addresses" Type="LotBankModel.Store.addresses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contacts">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="addresses">
+        <PropertyRef Name="contactid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__builder_c__build__70A8B9AE">
+    <End Role="builders" Type="LotBankModel.Store.builders" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="builder_contacts" Type="LotBankModel.Store.builder_contacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="builders">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="builder_contacts">
+        <PropertyRef Name="builderid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__builder_c__build__74794A92">
+    <End Role="builders" Type="LotBankModel.Store.builders" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="builder_comments" Type="LotBankModel.Store.builder_comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="builders">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="builder_comments">
+        <PropertyRef Name="builderid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__builder_c__comme__756D6ECB">
+    <End Role="comments" Type="LotBankModel.Store.comments" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="builder_comments" Type="LotBankModel.Store.builder_comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="comments">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="builder_comments">
+        <PropertyRef Name="commentid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__builder_c__conta__719CDDE7">
+    <End Role="contacts" Type="LotBankModel.Store.contacts" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="builder_contacts" Type="LotBankModel.Store.builder_contacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contacts">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="builder_contacts">
+        <PropertyRef Name="contactid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__company_t__typei__3B0BC30C">
+    <End Role="types" Type="LotBankModel.Store.types" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="company_types" Type="LotBankModel.Store.company_types" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="types">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="company_types">
+        <PropertyRef Name="typeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__diligence__plant__17C286CF">
+    <End Role="plan_types" Type="LotBankModel.Store.plan_types" Multiplicity="1" />
+    <End Role="diligence_plans" Type="LotBankModel.Store.diligence_plans" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="plan_types">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="diligence_plans">
+        <PropertyRef Name="plantypeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__diligence__proje__1209AD79">
+    <End Role="projects" Type="LotBankModel.Store.projects" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="diligence_reports" Type="LotBankModel.Store.diligence_reports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="projects">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="diligence_reports">
+        <PropertyRef Name="projectid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__diligence__proje__16CE6296">
+    <End Role="projects" Type="LotBankModel.Store.projects" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="diligence_plans" Type="LotBankModel.Store.diligence_plans" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="projects">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="diligence_plans">
+        <PropertyRef Name="projectid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__diligence__proje__1B9317B3">
+    <End Role="projects" Type="LotBankModel.Store.projects" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="diligence_title" Type="LotBankModel.Store.diligence_title" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="projects">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="diligence_title">
+        <PropertyRef Name="projectid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__diligence__proje__22401542">
+    <End Role="projects" Type="LotBankModel.Store.projects" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="diligence_utilities" Type="LotBankModel.Store.diligence_utilities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="projects">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="diligence_utilities">
+        <PropertyRef Name="projectid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__diligence__proje__2704CA5F">
+    <End Role="projects" Type="LotBankModel.Store.projects" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="diligence_location" Type="LotBankModel.Store.diligence_location" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="projects">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="diligence_location">
+        <PropertyRef Name="projectid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__diligence__proje__2AD55B43">
+    <End Role="projects" Type="LotBankModel.Store.projects" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="diligence_financial" Type="LotBankModel.Store.diligence_financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="projects">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="diligence_financial">
+        <PropertyRef Name="projectid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__diligence__proje__318258D2">
+    <End Role="projects" Type="LotBankModel.Store.projects" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="diligence_ent" Type="LotBankModel.Store.diligence_ent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="projects">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="diligence_ent">
+        <PropertyRef Name="projectid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__diligence__proje__382F5661">
+    <End Role="projects" Type="LotBankModel.Store.projects" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="diligence_hoa" Type="LotBankModel.Store.diligence_hoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="projects">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="diligence_hoa">
+        <PropertyRef Name="projectid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__diligence__provi__2334397B">
+    <End Role="utility_providers" Type="LotBankModel.Store.utility_providers" Multiplicity="1" />
+    <End Role="diligence_utilities" Type="LotBankModel.Store.diligence_utilities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="utility_providers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="diligence_utilities">
+        <PropertyRef Name="providerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__diligence__repor__12FDD1B2">
+    <End Role="report_types" Type="LotBankModel.Store.report_types" Multiplicity="1" />
+    <End Role="diligence_reports" Type="LotBankModel.Store.diligence_reports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="report_types">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="diligence_reports">
+        <PropertyRef Name="reporttypeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__emails__contacti__59C55456">
+    <End Role="contacts" Type="LotBankModel.Store.contacts" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="emails" Type="LotBankModel.Store.emails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contacts">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="emails">
+        <PropertyRef Name="contactid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__entities__invest__6D9742D9">
+    <End Role="investors" Type="LotBankModel.Store.investors" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="entities" Type="LotBankModel.Store.entities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="investors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="entities">
+        <PropertyRef Name="investorid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fund_comm__comme__753864A1">
+    <End Role="comments" Type="LotBankModel.Store.comments" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="fund_comments" Type="LotBankModel.Store.fund_comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="comments">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="fund_comments">
+        <PropertyRef Name="commentid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fund_comm__fundi__74444068">
+    <End Role="funds" Type="LotBankModel.Store.funds" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="fund_comments" Type="LotBankModel.Store.fund_comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="fund_comments">
+        <PropertyRef Name="fundid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fund_leve__fundi__5E54FF49">
+    <End Role="funds" Type="LotBankModel.Store.funds" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="fund_leverage" Type="LotBankModel.Store.fund_leverage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="fund_leverage">
+        <PropertyRef Name="fundid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fund_mana__fundi__52E34C9D">
+    <End Role="funds" Type="LotBankModel.Store.funds" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="fund_manager" Type="LotBankModel.Store.fund_manager" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="fund_manager">
+        <PropertyRef Name="fundid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fund_offe__fundi__5A846E65">
+    <End Role="funds" Type="LotBankModel.Store.funds" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="fund_offering" Type="LotBankModel.Store.fund_offering" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="fund_offering">
+        <PropertyRef Name="fundid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fundmanag__conta__56B3DD81">
+    <End Role="contacts" Type="LotBankModel.Store.contacts" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="fundmanager_contacts" Type="LotBankModel.Store.fundmanager_contacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contacts">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="fundmanager_contacts">
+        <PropertyRef Name="contactid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fundmanag__fmana__55BFB948">
+    <End Role="funds" Type="LotBankModel.Store.funds" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="fundmanager_contacts" Type="LotBankModel.Store.fundmanager_contacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="fundmanager_contacts">
+        <PropertyRef Name="fmanagerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__funds__companyty__3EDC53F0">
+    <End Role="company_types" Type="LotBankModel.Store.company_types" Multiplicity="0..1" />
+    <End Role="funds" Type="LotBankModel.Store.funds" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="company_types">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="funds">
+        <PropertyRef Name="companytypeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__funds_com__fundi__7908F585">
+    <End Role="funds" Type="LotBankModel.Store.funds" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="funds_committed" Type="LotBankModel.Store.funds_committed" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="funds_committed">
+        <PropertyRef Name="fundid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__funds_com__inves__79FD19BE">
+    <End Role="investors" Type="LotBankModel.Store.investors" Multiplicity="1" />
+    <End Role="funds_committed" Type="LotBankModel.Store.funds_committed" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="investors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="funds_committed">
+        <PropertyRef Name="investorid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__funds_inv__fundi__02925FBF">
+    <End Role="funds" Type="LotBankModel.Store.funds" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="funds_invested" Type="LotBankModel.Store.funds_invested" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="funds_invested">
+        <PropertyRef Name="fundid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__funds_inv__proje__038683F8">
+    <End Role="projects" Type="LotBankModel.Store.projects" Multiplicity="1" />
+    <End Role="funds_invested" Type="LotBankModel.Store.funds_invested" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="projects">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="funds_invested">
+        <PropertyRef Name="projectid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__funds_rec__fundi__7DCDAAA2">
+    <End Role="funds" Type="LotBankModel.Store.funds" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="funds_received" Type="LotBankModel.Store.funds_received" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="funds_received">
+        <PropertyRef Name="fundid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__funds_rec__inves__7EC1CEDB">
+    <End Role="investors" Type="LotBankModel.Store.investors" Multiplicity="1" />
+    <End Role="funds_received" Type="LotBankModel.Store.funds_received" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="investors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="funds_received">
+        <PropertyRef Name="investorid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__investor___conta__7167D3BD">
+    <End Role="contacts" Type="LotBankModel.Store.contacts" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="investor_contacts" Type="LotBankModel.Store.investor_contacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contacts">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="investor_contacts">
+        <PropertyRef Name="contactid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__investor___inves__7073AF84">
+    <End Role="investors" Type="LotBankModel.Store.investors" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="investor_contacts" Type="LotBankModel.Store.investor_contacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="investors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="investor_contacts">
+        <PropertyRef Name="investorid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__investor___typei__6501FCD8">
+    <End Role="types" Type="LotBankModel.Store.types" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="investor_types" Type="LotBankModel.Store.investor_types" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="types">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="investor_types">
+        <PropertyRef Name="typeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__investors__inves__68D28DBC">
+    <End Role="investor_types" Type="LotBankModel.Store.investor_types" Multiplicity="1" />
+    <End Role="investors" Type="LotBankModel.Store.investors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="investor_types">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="investors">
+        <PropertyRef Name="investortypeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__master_pl__build__0EF836A4">
+    <End Role="builders" Type="LotBankModel.Store.builders" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="master_planned_communities" Type="LotBankModel.Store.master_planned_communities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="builders">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="master_planned_communities">
+        <PropertyRef Name="builderid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__phones__contacti__5D95E53A">
+    <End Role="contacts" Type="LotBankModel.Store.contacts" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="phones" Type="LotBankModel.Store.phones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contacts">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="phones">
+        <PropertyRef Name="contactid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__plan_type__typei__7B264821">
+    <End Role="types" Type="LotBankModel.Store.types" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="plan_types" Type="LotBankModel.Store.plan_types" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="types">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="plan_types">
+        <PropertyRef Name="typeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__project_c__comme__0E391C95">
+    <End Role="comments" Type="LotBankModel.Store.comments" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="project_comments" Type="LotBankModel.Store.project_comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="comments">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="project_comments">
+        <PropertyRef Name="commentid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__project_c__proje__0D44F85C">
+    <End Role="projects" Type="LotBankModel.Store.projects" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="project_comments" Type="LotBankModel.Store.project_comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="projects">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="project_comments">
+        <PropertyRef Name="projectid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__project_l__proje__6225902D">
+    <End Role="projects" Type="LotBankModel.Store.projects" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="project_leverage" Type="LotBankModel.Store.project_leverage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="projects">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="project_leverage">
+        <PropertyRef Name="projectid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__project_s__proje__0A688BB1">
+    <End Role="projects" Type="LotBankModel.Store.projects" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="project_sizes" Type="LotBankModel.Store.project_sizes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="projects">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="project_sizes">
+        <PropertyRef Name="projectid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__projects__builde__7FEAFD3E">
+    <End Role="builders" Type="LotBankModel.Store.builders" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="projects" Type="LotBankModel.Store.projects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="builders">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="projects">
+        <PropertyRef Name="builderid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__purchase___build__477199F1">
+    <End Role="builders" Type="LotBankModel.Store.builders" Multiplicity="1" />
+    <End Role="purchase_agreement" Type="LotBankModel.Store.purchase_agreement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="builders">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="purchase_agreement">
+        <PropertyRef Name="builderid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__purchase___fundi__4589517F">
+    <End Role="funds" Type="LotBankModel.Store.funds" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="purchase_agreement" Type="LotBankModel.Store.purchase_agreement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="purchase_agreement">
+        <PropertyRef Name="fundid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__purchase___proje__467D75B8">
+    <End Role="projects" Type="LotBankModel.Store.projects" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="purchase_agreement" Type="LotBankModel.Store.purchase_agreement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="projects">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="purchase_agreement">
+        <PropertyRef Name="projectid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__purchasea__agree__4A4E069C">
+    <End Role="purchase_agreement" Type="LotBankModel.Store.purchase_agreement" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="purchaseagreement_contacts" Type="LotBankModel.Store.purchaseagreement_contacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="purchase_agreement">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="purchaseagreement_contacts">
+        <PropertyRef Name="agreementid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__purchasea__agree__4E1E9780">
+    <End Role="purchase_agreement" Type="LotBankModel.Store.purchase_agreement" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="purchaseagreement_comments" Type="LotBankModel.Store.purchaseagreement_comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="purchase_agreement">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="purchaseagreement_comments">
+        <PropertyRef Name="agreementid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__purchasea__comme__4F12BBB9">
+    <End Role="comments" Type="LotBankModel.Store.comments" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="purchaseagreement_comments" Type="LotBankModel.Store.purchaseagreement_comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="comments">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="purchaseagreement_comments">
+        <PropertyRef Name="commentid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__purchasea__conta__4B422AD5">
+    <End Role="contacts" Type="LotBankModel.Store.contacts" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="purchaseagreement_contacts" Type="LotBankModel.Store.purchaseagreement_contacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contacts">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="purchaseagreement_contacts">
+        <PropertyRef Name="contactid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__report_ty__typei__7849DB76">
+    <End Role="types" Type="LotBankModel.Store.types" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="report_types" Type="LotBankModel.Store.report_types" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="types">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="report_types">
+        <PropertyRef Name="typeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__trade_typ__typei__6442E2C9">
+    <End Role="types" Type="LotBankModel.Store.types" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="trade_types" Type="LotBankModel.Store.trade_types" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="types">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="trade_types">
+        <PropertyRef Name="typeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__traderef__builde__6DCC4D03">
+    <End Role="builders" Type="LotBankModel.Store.builders" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="traderef" Type="LotBankModel.Store.traderef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="builders">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="traderef">
+        <PropertyRef Name="builderid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__traderef__tradet__6CD828CA">
+    <End Role="trade_types" Type="LotBankModel.Store.trade_types" Multiplicity="1" />
+    <End Role="traderef" Type="LotBankModel.Store.traderef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="trade_types">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="traderef">
+        <PropertyRef Name="tradetypeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MPC_Id">
+    <End Role="master_planned_communities" Type="LotBankModel.Store.master_planned_communities" Multiplicity="1" />
+    <End Role="projects" Type="LotBankModel.Store.projects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="master_planned_communities">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="projects">
+        <PropertyRef Name="mpcid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

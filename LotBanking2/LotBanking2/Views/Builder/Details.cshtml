@@ -1,0 +1,109 @@
+﻿@model LotBanking2.viewmodels.builderConnect
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h1>Details</h1>
+
+<h3>Builder</h3>
+
+<fieldset>
+    <legend>builder</legend>
+
+     @Html.HiddenFor(model => model.builder.id)
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.builder.buildername)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.builder.buildername)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.builder.optioneename)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.builder.optioneename)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.builder.contractorname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.builder.contractorname)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.builder.website)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.builder.website)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.builder.current_litigation)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.builder.current_litigation)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.builder.current_litigation_abstract)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.builder.current_litigation_abstract)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.builder.past_litigation)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.builder.past_litigation)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.builder.past_litigation_abstract)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.builder.past_litigation_abstract)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.builder.buildercol)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.builder.buildercol)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.builder.date_created)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.builder.date_created)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.builder.date_modified)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.builder.date_modified)
+    </div>
+
+    <!-- ----------------------------------------------------------------------------------------------------------------------------- -->
+    
+            <div>
+                @Html.ValidationSummary(true)
+                <fieldset>
+                    <legend>Contact Address</legend>
+		                @Html.Partial("ContactDetails", Model)
+                </fieldset>
+            </div>    
+    
+        <!-- ----------------------------------------------------------------------------------------------------------------------------- -->
+
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.builder.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

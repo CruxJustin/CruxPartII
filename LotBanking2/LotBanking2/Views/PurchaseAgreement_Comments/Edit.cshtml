@@ -1,0 +1,45 @@
+﻿@model LotBanking2.Models.purchaseagreement_comments
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>purchaseagreement_comments</legend>
+
+        @Html.HiddenFor(model => model.id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.agreementid, "purchase_agreement")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("agreementid", String.Empty)
+            @Html.ValidationMessageFor(model => model.agreementid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.commentid, "comment")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("commentid", String.Empty)
+            @Html.ValidationMessageFor(model => model.commentid)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

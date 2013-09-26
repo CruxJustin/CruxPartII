@@ -1,0 +1,172 @@
+﻿@model LotBanking2.Models.fund_offering
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>fund_offering</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fund.name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fund.name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.project_irr)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.project_irr)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.project_wdp)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.project_wdp)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.project_irr_leveraged)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.project_irr_leveraged)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.project_wdp_leveraged)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.project_wdp_leveraged)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dquity_required)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dquity_required)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Pref_rate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Pref_rate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.hurdle_rate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.hurdle_rate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.split_to_hurdle)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.split_to_hurdle)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.split_after_hurdle)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.split_after_hurdle)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.participation_cbh)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.participation_cbh)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.investor_irr_forecast)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.investor_irr_forecast)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.equity_comments)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.equity_comments)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.underwriting_fee)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.underwriting_fee)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.management_fee_cbh)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.management_fee_cbh)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Management_fee_collected)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Management_fee_collected)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.cashflow_forecast)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.cashflow_forecast)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.cashflow_actual)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.cashflow_actual)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.base_economics_comments)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.base_economics_comments)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ppm_date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ppm_date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.date_created)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date_created)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.date_modified)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date_modified)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

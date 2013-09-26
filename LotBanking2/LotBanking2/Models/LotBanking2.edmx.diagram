@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8d65413c732b47dca5747ee5f908774e" Name="Diagram1">
+        <EntityTypeShape EntityType="LotBankModel.address" Width="1.5" PointX="3" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.builder_comments" Width="1.5" PointX="3" PointY="34" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.builder_contacts" Width="1.5" PointX="3" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.builder" Width="1.5" PointX="0.75" PointY="32.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.comment" Width="1.5" PointX="0.75" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.company_types" Width="1.5" PointX="6.75" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.contact" Width="1.5" PointX="0.75" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.diligence_ent" Width="1.5" PointX="5.25" PointY="25.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.diligence_financial" Width="1.5" PointX="5.25" PointY="30.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.diligence_hoa" Width="1.5" PointX="5.25" PointY="34.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.diligence_location" Width="1.5" PointX="5.25" PointY="38.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.diligence_plans" Width="1.5" PointX="8.25" PointY="39.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.diligence_reports" Width="1.5" PointX="5.25" PointY="43.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.diligence_title" Width="1.5" PointX="5.25" PointY="49.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.diligence_utilities" Width="1.5" PointX="8.25" PointY="35.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.email" Width="1.5" PointX="3" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.entity" Width="1.5" PointX="10.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.fund_comments" Width="1.5" PointX="14.25" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.fund_leverage" Width="1.5" PointX="11.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.fund_manager" Width="1.5" PointX="11.25" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.fund_offering" Width="1.5" PointX="11.25" PointY="25.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.fundmanager_contacts" Width="1.5" PointX="14.25" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.fund" Width="1.5" PointX="9" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.funds_committed" Width="1.5" PointX="14.25" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.funds_invested" Width="1.5" PointX="8.25" PointY="43" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.funds_received" Width="1.5" PointX="13.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.investor_contacts" Width="1.5" PointX="14.25" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.investor_types" Width="1.5" PointX="5.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.investor" Width="1.5" PointX="8" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.phone" Width="1.5" PointX="3" PointY="47.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.plan_types" Width="1.5" PointX="6" PointY="46.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.project_comments" Width="1.5" PointX="11.25" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.project_leverage" Width="1.5" PointX="5.25" PointY="63.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.project_sizes" Width="1.5" PointX="5.25" PointY="69" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.project" Width="1.5" PointX="3" PointY="37.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.purchase_agreement" Width="1.5" PointX="11.25" PointY="32.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.purchaseagreement_comments" Width="1.5" PointX="13.5" PointY="34.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.purchaseagreement_contacts" Width="1.5" PointX="13.5" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.report_types" Width="1.5" PointX="3" PointY="44.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.trade_types" Width="1.5" PointX="5.75" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.traderef" Width="1.5" PointX="8" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.type" Width="1.5" PointX="3.5" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LotBankModel.utility_providers" Width="1.5" PointX="6" PointY="54.5" IsExpanded="true" />
+        <AssociationConnector Association="LotBankModel.FK__addresses__conta__173876EA" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__builder_c__build__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__builder_c__comme__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__builder_c__build__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__builder_c__conta__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__projects__builde__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__purchase___build__08B54D69" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__traderef__builde__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__fund_comm__comme__367C1819" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__project_c__comme__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__purchasea__comme__10566F31" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__company_t__typei__7C4F7684" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__funds__companyty__00200768" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__emails__contacti__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__fundmanag__conta__17F790F9" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__investor___conta__32AB8735" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__phones__contacti__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__purchasea__conta__0C85DE4D" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__diligence__proje__72C60C4A" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__diligence__proje__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__diligence__proje__797309D9" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__diligence__proje__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__diligence__plant__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__diligence__proje__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__diligence__proje__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__diligence__repor__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__diligence__proje__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__diligence__proje__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__diligence__provi__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__entities__invest__2EDAF651" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__fund_comm__fundi__3587F3E0" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__fund_leve__fundi__1F98B2C1" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__fund_mana__fundi__14270015" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__fund_offe__fundi__1BC821DD" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__fundmanag__fmana__17036CC0" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__funds_com__fundi__3A4CA8FD" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__funds_inv__fundi__43D61337" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__funds_rec__fundi__3F115E1A" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__purchase___fundi__06CD04F7" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__funds_com__inves__3B40CD36" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__funds_inv__proje__44CA3770" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__funds_rec__inves__40058253" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__investor___inves__31B762FC" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__investor___typei__2645B050" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__investors__inves__2A164134" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__plan_type__typei__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__project_c__proje__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__project_l__proje__236943A5" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__project_s__proje__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__purchase___proje__07C12930" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__purchasea__agree__0B91BA14" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__purchasea__agree__0F624AF8" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__report_ty__typei__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__trade_typ__typei__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="LotBankModel.FK__traderef__tradet__2E1BDC42" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="LotBankModel.master_planned_communities" Width="1.5" PointX="3.25" PointY="59.875" />
+        <AssociationConnector Association="LotBankModel.FK__master_pl__build__0EF836A4" />
+        <AssociationConnector Association="LotBankModel.FK_MPC_Id" />
+        <EntityTypeShape EntityType="LotBankModel.Artisan" Width="1.5" PointX="8.125" PointY="66.25" />
+        <EntityTypeShape EntityType="LotBankModel.aoeu_htns" Width="1.5" PointX="10.375" PointY="66.875" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

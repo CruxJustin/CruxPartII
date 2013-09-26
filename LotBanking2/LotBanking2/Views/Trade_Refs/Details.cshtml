@@ -1,0 +1,50 @@
+﻿@model LotBanking2.Models.traderef
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>traderef</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.builder.buildername)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.builder.buildername)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.trade_types.id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.trade_types.id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.notes)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.notes)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.date_created)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date_created)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.date_modified)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date_modified)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

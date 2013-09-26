@@ -1,0 +1,87 @@
+﻿@model IEnumerable<LotBanking2.Models.diligence_location>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.project.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.legal_description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.middle_school)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.other_school)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.parcelno_assessor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.state)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.zipcode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_created)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_modified)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.project.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.legal_description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.middle_school)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.other_school)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.parcelno_assessor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.state)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.zipcode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_modified)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

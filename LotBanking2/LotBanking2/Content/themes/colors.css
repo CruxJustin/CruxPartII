@@ -1,0 +1,386 @@
+/* 
+ for text colors, background colors, borders, etc.
+ 
+ dark blue: #102562
+ dark bright blue: #2d42f6
+ medium blue: #5A84DE
+ light blue: #e7efff
+ 
+ 
+ -----------------------
+ dark blue: 003366
+ light blue: 6699cc
+ midnight blue: 000044
+ silver: c0c0c0
+ 
+*/
+
+body {
+  color: #000044;
+  background-color: #fff;
+}
+
+* {
+}
+
+a {
+  color: #000;
+}
+
+a:hover {
+  color: #000044;
+  background-color: #6699cc;
+  text-decoration: none;
+}
+
+header, footer, article, section, hgroup, nav, figure {
+}
+
+header#main {
+  background: #003366;
+  color: #fff;
+}
+
+section#body_full, section#body, section#body_lp, section#body_rp {
+  background-color: #fff;
+}
+
+#body .toolbar, #body_full .toolbar, #body_lp .toolbar, #body_rp .toolbar {
+  background-color: #c0c0c0;
+  border-bottom: 2px solid #000044;
+}
+
+#body_full .toolbar {
+}
+
+section#body .content, #body_full .content, #body_lp .content, #body_rp .content {
+  border: 2px solid #000044;
+  border-radius: 10px 10px 0 0;
+  background-color: #fff;
+}
+
+footer {
+  background-color: #000044; 
+}
+
+section#leftpanel {
+  border-right: 2px solid #000044;
+}
+
+section#rightpanel {
+  background-color: #fff;
+}
+
+header#main .branding {
+  background-color: #003366;
+}
+
+header#main .branding h1 {
+}
+
+header#main .branding .account {
+}
+
+#main .branding .account ul {
+}
+
+#main .branding .account ul li {
+}
+
+#main .branding .account ul li a {
+  background-color: #003366;
+  border: .1em solid #c0c0c0;
+  color: #c0c0c0;
+}
+
+#main .branding .account ul li a:hover {
+  background-color: #fff;
+  border: .1em solid #fff;
+  color: #003366;
+}
+
+#main .navigation {
+}
+
+#main .navigation ul {
+}
+
+#main .navigation ul li {
+}
+
+#main .navigation ul li a {
+  border: .15em solid #c0c0c0;
+  background-color: #003366;
+  color: #c0c0c0;
+  margin-top: .15em;
+  /* margin-bottom: .15em; */
+}
+
+#main .navigation ul li a:hover {
+  background-color: #c0c0c0;
+  border: .15em solid #c0c0c0;
+  color: #003366;
+}
+
+body#np #main .navigation ul li.np a, body#bp #main .navigation ul li.bp a, 
+  body#rp #main .navigation ul li.rp a, body#lp #main .navigation ul li.lp a, 
+  body#fr #main .navigation ul li.fr a
+{
+  border: .15em solid #c0c0c0;
+  border-top: .3em solid #c0c0c0;
+  /* border-bottom: .25em solid #c0c0c0; */
+  background-color: #c0c0c0;
+  color: #000044;
+  /*
+  margin-bottom: 0;
+  margin-top: .15em;
+  */
+  box-shadow: none;
+}
+
+.toolbar ul {
+}
+
+.toolbar ul li {
+}
+
+.toolbar ul li a {
+  border: .1em solid #000044;
+}
+
+.toolbar ul li a:hover {
+}
+
+.toolbar ul li span {
+  border: .1em solid #c0c0c0;
+}
+
+#leftpanel ul.lmenu {
+}
+
+#leftpanel ul.lmenu li {
+}
+
+#leftpanel ul.lmenu li a {
+  border-bottom: .2em solid #000044;
+  /* border-right: 0; */
+  color: #6f7ca0;
+  text-indent: 2em;
+}
+
+#leftpanel ul.lmenu li a:hover {
+  /* border: .2em solid #102562; */
+  color: #000044;
+  border-right: 0;
+}
+
+#leftpanel ul.lmenu li a.current, #lefnpanel ul.lmenu li a.current:hover {
+  /* border: .2em solid #102562; */
+  color: #fff;
+  background-color: #000044;
+  text-indent: 1em;
+}
+
+#rightpanel h4 {
+}
+
+#rightpanel .rsborder {
+  background-color: #000044;
+}
+
+#rightpanel .openclose {
+}
+
+.openclose a {
+  color: #fff;
+  background-color: #000044;
+  border-radius: 0 .5em .5em 0;
+}
+
+.openclose a:hover {
+  background-color: #6699cc;
+  color: #003366;
+}
+
+#rightpanel .rscontent {
+  background-color: #fff;
+}
+
+.rscontent #docspanel {
+  /* background-color: #b2b2b2; */
+  box-shadow: inset 0 0 .2em #000;
+}
+
+.rscontent #commentspanel {
+  background-color: #fff;
+}
+
+.rscontent .subform {
+  background-color: #fff;
+}
+
+fieldset { 
+  background-color: #fff;
+  border: .2em solid #003366;
+  border-radius: .5em;
+}
+
+fieldset legend {
+  color: #003366;
+  background-color: #fff;
+}
+
+fieldset fieldset {
+}
+
+fieldset fieldset legend { 
+}
+
+fieldset ul {
+}
+
+fieldset ul li {
+  border-bottom: 1px solid #c0c0c0;
+}
+
+
+fieldset ul li p {
+}
+
+select optgroup {
+}
+
+select optgroup option {
+}
+
+label {
+}
+
+label.errorMessage {
+}
+
+label textarea {
+}
+
+label input {
+}
+
+label select {
+}
+
+fieldest li textarea {
+}
+
+fieldset li input {
+}
+
+fieldset li select {
+}
+
+/* highlight, other colors */
+
+span.highlight {
+  background-color: #FF0; /* yellow */
+  color: #000;
+}
+
+.dgreen {
+  background-color: #009C00;
+  color: #fff;
+}
+
+.lgreen {
+  background-color: #DBF1DB;
+}
+
+.dblue {
+  background-color: #9e1d20;
+  color: #ffffff;
+}
+
+.grey {
+  background-color: #E8E8E1;
+}
+
+.blue {
+  background-color: #F7F7F9;
+}
+
+.white {
+  background-color: #FFFFFF;
+}
+
+.clickable {
+}
+
+._msg {
+}
+
+label.errorMessage {
+  color: #f00;
+}
+
+#commentsAdd fieldset {
+  border: .2em solid #003366;
+  border-radius: .5em 0 0 .5em;
+  /* border-right: none; */
+}
+
+#commentsAdd fieldset ul li {
+  border-bottom: 0;
+}
+
+#progress {
+  -webkit-border-radius: .75em;
+  border-radius: .75em;
+  background-color: rgba(0, 0, 0, .7);
+  color: #fff;
+}
+
+.fade {
+}
+
+.fade.yellow, .fade .yellow {
+  background-color: #ff0;
+  color: #000;
+}
+
+
+/* general tables */
+table.data 
+{
+  border-top: .2em solid #000044;
+  border-collapse: collapse;
+}
+
+table.data tbody td {
+  border-bottom: 1px solid #E8E8E1;
+  border-right: 1px solid #E8E8E1;
+}
+
+th {
+  color: #000044;
+  background-color: #C4D9C8;
+}
+
+th span {
+}
+
+table.data tbody th {
+  background: #BEBDBB url(./images/top_span_02.jpg) top left repeat-x; /* silvery */
+  color: #fff;
+}
+
+tr.right th, th.right {
+}
+
+td.count {
+  color: #8e8e8e;
+}
+
+.spacer {
+  width: 90%;
+  margin: 0 auto;
+  height: 10em;
+  box-shadow: inset 0 0 .2em #000;  
+}

@@ -1,0 +1,82 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Helvetica;
+  font-size: 14px; /* 1em = primary font size, here it's 14px. */
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  /* box-shadow: inset 0px 0px 2px #f00; */
+}
+
+a {
+  font-weight: bold;
+}
+
+header, footer, article, section, hgroup, nav, figure {
+  display: block;
+}
+
+bt
+{
+    font-weight: bold;
+    font-size: medium;
+}
+
+header#main {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  height: 5em;
+  /* box-shadow: inset 0 0 .2em #000; */
+}
+
+section#body_full, section#body, section#body_lp, section#body_rp {
+  position: absolute;
+  /* top: 8em; */
+  left: 0;
+  overflow: auto;
+}
+
+section#body_full, section#body, section#body_lp, section#body_rp, 
+section#leftpanel, section#rightpanel
+{
+  top: 8em;
+  bottom: .2em;
+  /* box-shadow: inset 0 0 .2em #000; */
+}
+
+section#body_full {
+  width: 100%;
+}
+
+section#body {
+  width: 56%;
+  left: 10%;
+}
+
+section#body_lp {
+  width: 90%;
+  left: 10%;
+}
+
+section#body_rp {
+  width: 66%;
+}
+
+section#body .content, #body_full .content, #body_lp .content, #body_rp .content {
+  width: 95%;
+  margin: 5px auto;
+  padding: .6em;
+  overflow: auto;
+}
+
+footer {
+  width: 100%;
+  height: .2em;
+  position: absolute;
+  bottom: 0px;
+  /* box-shadow: inset 0 0 .2em #000; */
+}

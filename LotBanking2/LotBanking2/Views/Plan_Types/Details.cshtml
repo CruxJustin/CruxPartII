@@ -1,0 +1,22 @@
+﻿@model LotBanking2.Models.plan_types
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>plan_types</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.type.type1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.type.type1)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

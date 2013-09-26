@@ -1,0 +1,46 @@
+
+/* general tables */
+table.data {
+  padding: 0;
+	overflow: auto;
+}
+
+table.data tbody td {
+  padding: .2em .5em .2em .4em;
+  margin: 0;
+  vertical-align: top;
+}
+
+table.data tbody td p {
+  display: block;
+  margin: 0;
+  position: relative;
+  height: 1.2em;
+  height: auto !important;
+  min-height: 1.2em;
+}
+
+table.data td p span.editDelete {
+  font-size: .9em;
+  position: absolute;
+  top: 0;
+  right: -50px;
+}
+
+th {
+  text-align: center;
+}
+
+th span {
+  text-decoration: underline;
+}
+
+table.data tbody th {
+  font-weight: bold;
+  padding: .2em .5em .2em .5em;
+  text-align: left;
+}
+
+tr.right th, th.right {
+  text-align: right;
+}

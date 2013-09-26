@@ -1,0 +1,71 @@
+﻿@model LotBanking2.Models.fund_manager
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>fund_manager</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fund.name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fund.name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.legal_entity_name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.legal_entity_name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.state_of_incorp)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.state_of_incorp)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tax_id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tax_id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.setup_date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.setup_date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dissolution_date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dissolution_date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.date_created)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date_created)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.date_modified)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date_modified)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

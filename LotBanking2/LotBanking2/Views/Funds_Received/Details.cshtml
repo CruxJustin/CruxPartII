@@ -1,0 +1,64 @@
+﻿@model LotBanking2.Models.funds_received
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>funds_received</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fund.name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fund.name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.investor.name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.investor.name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.received_amount)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.received_amount)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.received_date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.received_date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.details)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.details)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.date_created)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date_created)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.date_modified)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date_modified)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

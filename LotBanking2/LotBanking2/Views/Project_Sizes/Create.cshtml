@@ -1,0 +1,107 @@
+﻿@model LotBanking2.Models.project_sizes
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>project_sizes</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.projectid, "project")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("projectid", String.Empty)
+            @Html.ValidationMessageFor(model => model.projectid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.parcel_acres)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.parcel_acres)
+            @Html.ValidationMessageFor(model => model.parcel_acres)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.parcel_lots)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.parcel_lots)
+            @Html.ValidationMessageFor(model => model.parcel_lots)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.lotsize_min)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.lotsize_min)
+            @Html.ValidationMessageFor(model => model.lotsize_min)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.lotsize_max)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.lotsize_max)
+            @Html.ValidationMessageFor(model => model.lotsize_max)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.setbacks_front)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.setbacks_front)
+            @Html.ValidationMessageFor(model => model.setbacks_front)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.setbacks_rear)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.setbacks_rear)
+            @Html.ValidationMessageFor(model => model.setbacks_rear)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.setbacks_side)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.setbacks_side)
+            @Html.ValidationMessageFor(model => model.setbacks_side)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.date_created)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.date_created)
+            @Html.ValidationMessageFor(model => model.date_created)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.date_modified)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.date_modified)
+            @Html.ValidationMessageFor(model => model.date_modified)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

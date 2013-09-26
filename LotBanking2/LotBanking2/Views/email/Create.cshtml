@@ -1,0 +1,67 @@
+﻿@model LotBanking2.Models.email
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>email</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.contactid, "contact")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("contactid", String.Empty)
+            @Html.ValidationMessageFor(model => model.contactid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.type)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.type)
+            @Html.ValidationMessageFor(model => model.type)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.email1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.email1)
+            @Html.ValidationMessageFor(model => model.email1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.date_created)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.date_created)
+            @Html.ValidationMessageFor(model => model.date_created)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.date_modified)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.date_modified)
+            @Html.ValidationMessageFor(model => model.date_modified)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

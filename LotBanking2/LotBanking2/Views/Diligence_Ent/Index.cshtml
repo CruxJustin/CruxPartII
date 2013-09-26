@@ -1,0 +1,119 @@
+﻿@model IEnumerable<LotBanking2.Models.diligence_ent>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.naos_comments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.naos_requirements)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.restrictions_other)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.plat_comments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.plat_status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.plat_final)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.plat_stipulations)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.zoning_designation_ordinance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.zoning_development_agreement)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.zoning_jurisdiction_city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.zoning_stipulations)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.zoning_vesting_status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.zoning_density)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_created)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_modified)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+    
+        <td>
+            @Html.DisplayFor(modelItem => item.naos_comments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.naos_requirements)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.restrictions_other)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.plat_comments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.plat_status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.plat_final)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.plat_stipulations)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.zoning_designation_ordinance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.zoning_development_agreement)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.zoning_jurisdiction_city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.zoning_stipulations)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.zoning_vesting_status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.zoning_density)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_modified)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

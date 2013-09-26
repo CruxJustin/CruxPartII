@@ -1,0 +1,53 @@
+﻿@model LotBanking2.Models.diligence_plans
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>diligence_plans</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.project.name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.project.name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.plan_types.id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.plan_types.id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.notes)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.notes)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.date_created)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date_created)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.date_modified)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date_modified)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

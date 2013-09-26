@@ -1,0 +1,145 @@
+fieldset { 
+  padding: .5em;
+  overflow: auto;
+  /* margin: .25em; */
+}
+
+fieldset legend {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 0 .2em;
+}
+
+fieldset fieldset {
+  margin: 0 0 10px 10px;  
+  float: left;
+  padding: .5em .5em;
+}
+
+fieldset fieldset legend { 
+  font-weight: bold; 
+  font-size: 1em; 
+  padding: 0 .2em; 
+}
+
+fieldset fieldset.contents {
+  min-width: 27.5em;
+  width: 27.5em;
+  width: auto !important;
+}
+
+fieldset.contents textarea {
+  width: 500px;
+  height: 190px;
+}
+
+fieldset ul {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset ul li {
+  list-style: none;
+  display: block;
+  padding: 0 0 .5em 0;
+  margin: 0 0 .5em 0;
+  min-height: 1.5em;
+  overflow: auto;
+  position: relative;
+  float: left;
+}
+
+fieldset ul li p {
+  font-weight: bold;
+  display: block;
+  text-align: left;
+  padding: .2em;
+  margin: .5em;
+}
+
+fieldset ul select optgroup {
+  font-weight: bold; 
+  font-style:normal;
+}
+
+fieldset ul select optgroup option {
+  padding-left: 1em;
+}
+
+label {
+  display: block;
+  overflow: auto;
+  text-align: left;
+  font-weight: bold;
+  padding: 0 .5em;
+  margin: 0 0 .5em 0;
+}
+
+fieldset ul li._data span {
+  float: right;
+  width: 110px;
+  font-weight: normal;
+}
+
+fieldset ul li._data label {
+}
+
+label.errorMessage {
+}
+
+label textarea {
+  display: block;
+  width: 250px;
+  height: 120px;
+  float: left;
+}
+
+label input {
+  font-weight: normal;
+  width: 12.5em;
+  padding: .2em;
+  margin-left: 1em;
+  float: right;
+}
+
+label select {
+  font-weight: normal;
+  padding: .2em;
+  margin-left: 1em;
+  float: right;
+}
+
+fieldest li textarea {
+  display: block;
+  width: 250px;
+  height: 120px;
+  float: left;
+}
+
+fieldset li input {
+  font-weight: normal;
+  width: 12.5em;
+  padding: .2em;
+}
+
+fieldset li select {
+  font-weight: normal;
+  padding: .2em;
+  margin-left: 1em;
+}
+
+#commentsAdd fieldset {
+}
+
+#commentsAdd fieldset ul li {
+}
+
+.leftcol {
+  float: left;
+  width: 48%;
+}
+
+.rightcol {
+  float: right;
+  width: 48%;
+}

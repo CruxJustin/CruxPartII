@@ -1,0 +1,205 @@
+﻿@model LotBanking2.Models.fund_offering
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>fund_offering</legend>
+
+        @Html.HiddenFor(model => model.id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fundid, "fund")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("fundid", String.Empty)
+            @Html.ValidationMessageFor(model => model.fundid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.project_irr)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.project_irr)
+            @Html.ValidationMessageFor(model => model.project_irr)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.project_wdp)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.project_wdp)
+            @Html.ValidationMessageFor(model => model.project_wdp)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.project_irr_leveraged)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.project_irr_leveraged)
+            @Html.ValidationMessageFor(model => model.project_irr_leveraged)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.project_wdp_leveraged)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.project_wdp_leveraged)
+            @Html.ValidationMessageFor(model => model.project_wdp_leveraged)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.dquity_required)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.dquity_required)
+            @Html.ValidationMessageFor(model => model.dquity_required)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Pref_rate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Pref_rate)
+            @Html.ValidationMessageFor(model => model.Pref_rate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.hurdle_rate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.hurdle_rate)
+            @Html.ValidationMessageFor(model => model.hurdle_rate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.split_to_hurdle)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.split_to_hurdle)
+            @Html.ValidationMessageFor(model => model.split_to_hurdle)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.split_after_hurdle)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.split_after_hurdle)
+            @Html.ValidationMessageFor(model => model.split_after_hurdle)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.participation_cbh)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.participation_cbh)
+            @Html.ValidationMessageFor(model => model.participation_cbh)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.investor_irr_forecast)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.investor_irr_forecast)
+            @Html.ValidationMessageFor(model => model.investor_irr_forecast)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.equity_comments)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.equity_comments)
+            @Html.ValidationMessageFor(model => model.equity_comments)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.underwriting_fee)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.underwriting_fee)
+            @Html.ValidationMessageFor(model => model.underwriting_fee)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.management_fee_cbh)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.management_fee_cbh)
+            @Html.ValidationMessageFor(model => model.management_fee_cbh)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Management_fee_collected)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Management_fee_collected)
+            @Html.ValidationMessageFor(model => model.Management_fee_collected)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.cashflow_forecast)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.cashflow_forecast)
+            @Html.ValidationMessageFor(model => model.cashflow_forecast)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.cashflow_actual)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.cashflow_actual)
+            @Html.ValidationMessageFor(model => model.cashflow_actual)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.base_economics_comments)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.base_economics_comments)
+            @Html.ValidationMessageFor(model => model.base_economics_comments)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ppm_date)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ppm_date)
+            @Html.ValidationMessageFor(model => model.ppm_date)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.date_created)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.date_created)
+            @Html.ValidationMessageFor(model => model.date_created)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.date_modified)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.date_modified)
+            @Html.ValidationMessageFor(model => model.date_modified)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
