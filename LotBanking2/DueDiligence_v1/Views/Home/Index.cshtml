@@ -1,6 +1,9 @@
-﻿@{
+﻿ <link href="@Url.Content("~/Content/bargraph.css")" rel="stylesheet" type="text/css" />
+@{
     ViewBag.Title = "Crescent Bay Holdings";
+  
 }
+
 <body>
     <div class="menubar">
         <div class="table">
@@ -22,9 +25,21 @@
                 <div class="col1">
                     <!-- Column 2 start -->
                     <div class="position">
-                        <p>
-                            <img src="http://localhost:4838/Images/delete_graphs.png" />
-                        </p>
+                        <div class="graphcontainer">
+                            <div class="bar">
+                                <div class="percent">
+                                    <span style="width: 100%;"></span>
+                                </div>
+                                <div class="circle">
+                                    <span>0%</span>
+                                </div>
+                                <div class="text">
+                                    <input type="text" class="input" value="0" />
+                                    <small>Please change a value and hit the enter key.</small>
+                                </div>
+                            </div>
+                        </div>
+                        
 
                         <img src="http://localhost:4838/Images/delete_salesTraffic.png" />
                         <img src="http://localhost:4838/Images/delete_gMaps.png" />

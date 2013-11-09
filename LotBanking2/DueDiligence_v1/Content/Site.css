@@ -117,76 +117,72 @@ h5, h6 {
 
         /*only works because of the current size of the objects. Value should change upon correct implementation*/
         .threecol .col1 .position {
-            margin-left: 11%;
+            margin-left: 5%;
+            margin-right: 5%;
             height: 800px;
             padding-bottom: 10px;
         }
 
-            .threecol .col1 .position .topright {
-                position: relative;
-                top: 30px;
-            }
+.graphcontainer {
 
-    .threecol .col2 {
-        width: 13%; /* Width of left column content (column width minus padding on either side) */
-        left: 26%; /* width of (right column) plus (center column left and right padding) plus (left column left padding) */
+    background-color:white;
+    height: 45%;
+    width: 100%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.threecol .col2 {
+    width: 13%; /* Width of left column content (column width minus padding on either side) */
+    left: 26%; /* width of (right column) plus (center column left and right padding) plus (left column left padding) */
+}
+
+    .threecol .col2 .position {
+        position: relative;
+        margin-left: 20%;
     }
 
-        .threecol .col2 .position {
-            position: relative;
-            margin-left: 20%;
-        }
-
-    .threecol .col3 {
-        width: 11%; /* Width of right column content (column width minus padding on either side) */
-        left: 95%; /* Please make note of the brackets here:
+.threecol .col3 {
+    width: 11%; /* Width of right column content (column width minus padding on either side) */
+    left: 95%; /* Please make note of the brackets here:
 					(100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
-    }
+}
 
-        .threecol .col3 .position {
-            margin-left: 20%;
-        }
+    .threecol .col3 .position {
+        margin-left: 20%;
+    }
 
 .content-wrapper {
 }
 
- #dropZone {
-        background: gray;
-        border: black dashed 3px;
-        width: 200px;
-        padding: 50px;
-        text-align: center;
-        color: white;
-    }
-
 /*seems like I should manipulate this in the body not seperately*/
 .menubar {
     background-color: #B8B8B8;
- 
 }
 
 .table {
     display: table;
     margin: -0px auto -10px auto;
 }
+
 ul#horizontal-list {
     min-width: 70%;
     list-style: none;
-}  
-
-
-ul#horizontal-list li {
-    display: inline;
-    font-weight: bold;
-    font-size: 20px;
-    padding-left: 30px;
 }
 
+
+    ul#horizontal-list li {
+        display: inline;
+        font-weight: bold;
+        font-size: 20px;
+        padding-left: 30px;
+    }
+
 li:hover {
-            color: white;
-            cursor: pointer;
-        }
-    
+    color: white;
+    cursor: pointer;
+}
+
 .main-content {
 }
 

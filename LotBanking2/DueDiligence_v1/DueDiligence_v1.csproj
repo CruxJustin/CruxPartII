@@ -202,6 +202,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bargraph.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -268,6 +269,8 @@
     <Content Include="Images\delete_taskList.png" />
     <Content Include="Images\pw_pattern.png" />
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
+    <Content Include="Scripts\bargraph-v1.js" />
+    <Content Include="Scripts\init.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js" />
     <Content Include="Scripts\jquery-2.0.3.min.map" />
@@ -323,11 +326,11 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\BuilderProposal\Index.cshtml" />
-    <Content Include="Views\BuilderProposal\Details.cshtml" />
     <Content Include="Views\BuilderProposal\Create.cshtml" />
-    <Content Include="Views\BuilderProposal\Edit.cshtml" />
     <Content Include="Views\BuilderProposal\Delete.cshtml" />
+    <Content Include="Views\BuilderProposal\Details.cshtml" />
+    <Content Include="Views\BuilderProposal\Edit.cshtml" />
+    <Content Include="Views\BuilderProposal\Index.cshtml" />
     <Content Include="Views\BuilderProposal\SearchIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -360,7 +363,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>2370</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:4838/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

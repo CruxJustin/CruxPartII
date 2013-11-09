@@ -6,9 +6,9 @@ namespace DueDiligence_v1.Models
 {
     public class BuilderProposal
     {
-
+        
         public int ID { get; set; }
-        //Details
+        
         [Required]
         public string Builder { get; set; }
 
