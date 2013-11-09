@@ -1,0 +1,105 @@
+﻿@model IEnumerable<DueDiligence_v1.Models.BuilderProposal>
+
+@{
+    ViewBag.Title = "SearchIndex";
+}
+
+<h2>SearchIndex</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+
+    @using (Html.BeginForm("SearchIndex", "BuilderProposal", FormMethod.Get)){    
+         <p> Builder: @Html.DropDownList("proposalBuilder", "All")
+             Project Name: @Html.TextBox("SearchString")<br />  
+         <input type="submit" value="Filter" /></p> 
+        }
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Builder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Legal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MPC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumOfLots)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Acquisitions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RollPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OptionDeposit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Improvements)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoanToCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comment)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Builder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Legal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MPC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumOfLots)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Acquisitions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RollPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OptionDeposit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Improvements)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoanToCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comment)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
