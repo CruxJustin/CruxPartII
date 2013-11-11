@@ -1,4 +1,5 @@
-﻿ <link href="@Url.Content("~/Content/bargraph.css")" rel="stylesheet" type="text/css" />
+﻿<link href="@Url.Content("~/Content/bargraph.css")" rel="stylesheet" type="text/css" />
+
 @{
     ViewBag.Title = "Crescent Bay Holdings";
   
@@ -31,7 +32,7 @@
                                     <span style="width: 100%;"></span>
                                 </div>
                                 <div class="circle">
-                                    <span>0%</span>
+                                    <span>$0</span>
                                 </div>
                                 <div class="text">
                                     <input type="text" class="input" value="0" />
@@ -43,7 +44,7 @@
                                     <span style="width: 100%;"></span>
                                 </div>
                                 <div class="circle">
-                                    <span>0%</span>
+                                    <span>$0</span>
                                 </div>
                                 <div class="text">
                                     <input type="text" class="input" value="0" />
@@ -55,7 +56,7 @@
                                     <span style="width: 100%;"></span>
                                 </div>
                                 <div class="circle">
-                                    <span>0%</span>
+                                    <span>$0</span>
                                 </div>
                                 <div class="text">
                                     <input type="text" class="input" value="0" />
@@ -63,30 +64,39 @@
                                 </div>
                             </div>
                         </div>
-                        
-
-                        <img src="http://localhost:4838/Images/delete_salesTraffic.png" />
-                        <img src="http://localhost:4838/Images/delete_gMaps.png" />
-
-
+                        <div class="bottomhalf">
+                            <div class="tscontainer">
+                                <img src="http://localhost:4838/Images/delete_salesTraffic.png" height="100%" width="100%"/>
+                            </div>
+                            <div class="mapcontainer">
+                                <img src="http://localhost:4838/Images/delete_gMaps.png"  height="100%" width="100%" />
+                            </div>
+                        </div>
                         <!-- Column 2 end -->
                     </div>
                 </div>
                 <div class="col2">
                     <!-- Column 1 start -->
-                    <p>
-                        <img src="http://localhost:4838/Images/delete_taskList.png" />
-                    </p>
-                    <p>
-                        <img src="http://localhost:4838/Images/delete_recentUpdates.png" />
-                    </p>
+                    <table class="tasklist">
+                        <tr>
+                            <th>TASK LIST</th>
+                        </tr>
+                        <tr>
+                            <td>row 1, cell 1</td>
+                        </tr>
+                        <tr>
+                            <td>row 1, cell 2</td>
+                        </tr>
+                    </table>
+
+
                     <!-- Column 1 end -->
                 </div>
                 <div class="col3">
                     <!-- Column 3 start -->
-                    <p>
-                        <img src="http://localhost:4838/Images/delete_builders.png" />
-                    </p>
+                    <div class="title">
+                        Builders
+                    </div>
                     <!-- Column 3 end -->
                 </div>
             </div>

@@ -173,4 +173,3 @@ D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\obj\Debug\DueDiligence_v1.Migrati
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\obj\Debug\DueDiligence_v1.csproj.GenerateResource.Cache
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\obj\Debug\DueDiligence_v1.dll
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\obj\Debug\DueDiligence_v1.pdb
-D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\obj\Debug\DueDiligence_v1.csprojResolveAssemblyReference.cache
