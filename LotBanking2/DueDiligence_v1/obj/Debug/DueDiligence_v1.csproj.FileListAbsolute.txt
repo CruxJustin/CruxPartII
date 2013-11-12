@@ -96,6 +96,8 @@ D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\DotNetOpenAuth.OAuth.dll
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\DotNetOpenAuth.OpenId.dll
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\EntityFramework.dll
+D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\GoogleMaps.LocationServices.dll
+D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\GoogleMapsApi.dll
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\Microsoft.Data.Edm.dll
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\Microsoft.Data.OData.dll
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\Microsoft.Web.Infrastructure.dll
@@ -117,6 +119,8 @@ D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\System.Web.WebPages.Razor.dll
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\WebGrease.dll
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\WebMatrix.Data.dll
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\WebMatrix.WebData.dll
+D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\GoogleMapsApi.pdb
+D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\GoogleMapsApi.xml
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\EntityFramework.xml
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\Newtonsoft.Json.xml
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\System.Net.Http.Formatting.xml
@@ -168,6 +172,7 @@ D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\ko\System.Spatial.resources.d
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\ru\System.Spatial.resources.dll
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\zh-Hans\System.Spatial.resources.dll
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\zh-Hant\System.Spatial.resources.dll
+D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\obj\Debug\DueDiligence_v1.csprojResolveAssemblyReference.cache
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\obj\Debug\DueDiligence_v1.Migrations.Initial.resources
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\obj\Debug\DueDiligence_v1.Migrations.AddDataAnnotationsMig.resources
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\obj\Debug\DueDiligence_v1.csproj.GenerateResource.Cache

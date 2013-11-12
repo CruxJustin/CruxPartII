@@ -1,5 +1,3 @@
-//do not edit. This is retarded and the slightest editing could make it blow up. -Chris
-
 $(function () {
 
     var input = $('.input'),
@@ -14,9 +12,12 @@ $(function () {
     input.on('keydown', function (e) {
         if (e.keyCode == 13) {
             var t = $(this), val = t.val();
-            if (val >= 0 && val <= 100) {
-                var w = 100 - val, pw = (bw * w) / 100,
+            if (val >= 0 && val <= 100000) {
+
+                // val/1000 for val = 100000 made sense Monday Night
+                var w = 100 - (val/1000), pw = (bw * w) / 100,
 					pa = {
+                        //Outputs width to HTML for circle use
 					    width: w + '%'
 					},
 					cw = (bw - pw) / 2,
@@ -24,12 +25,13 @@ $(function () {
 					    left: cw
 					}
                 ps.animate(pa);
-                cs.text(val + '%');
+                //changed % to $ no problem. Need to remember to clean and build solution
+                cs.text('$' + val);
                 circle.animate(ca, function () {
                     circle.removeClass(name)
                 }).addClass(name);
             } else {
-                alert('range: 0 - 100');
+                alert('range: 0 - 100000');
                 t.val('');
             }
         }
