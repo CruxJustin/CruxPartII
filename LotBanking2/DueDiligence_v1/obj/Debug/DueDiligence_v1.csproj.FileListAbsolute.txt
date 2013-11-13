@@ -172,7 +172,6 @@ D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\ko\System.Spatial.resources.d
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\ru\System.Spatial.resources.dll
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\zh-Hans\System.Spatial.resources.dll
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\bin\zh-Hant\System.Spatial.resources.dll
-D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\obj\Debug\DueDiligence_v1.csprojResolveAssemblyReference.cache
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\obj\Debug\DueDiligence_v1.Migrations.Initial.resources
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\obj\Debug\DueDiligence_v1.Migrations.AddDataAnnotationsMig.resources
 D:\GitHub\TeamCrux\LotBanking2\DueDiligence_v1\obj\Debug\DueDiligence_v1.csproj.GenerateResource.Cache
