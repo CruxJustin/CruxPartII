@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BuilderProposal.aspx.cs" Inherits="LotBankingCrux_v_1.BuilderProposal" %>
 
 <!DOCTYPE html>
-
+<!-- This is something new added -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
