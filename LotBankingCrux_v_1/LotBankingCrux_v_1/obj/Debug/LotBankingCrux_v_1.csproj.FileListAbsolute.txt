@@ -60,6 +60,6 @@ D:\GitHub\TeamCrux\LotBankingCrux_v_1\LotBankingCrux_v_1\bin\DotNetOpenAuth.Open
 D:\GitHub\TeamCrux\LotBankingCrux_v_1\LotBankingCrux_v_1\bin\DotNetOpenAuth.AspNet.xml
 D:\GitHub\TeamCrux\LotBankingCrux_v_1\LotBankingCrux_v_1\bin\Microsoft.AspNet.Membership.OpenAuth.xml
 D:\GitHub\TeamCrux\LotBankingCrux_v_1\LotBankingCrux_v_1\bin\Microsoft.AspNet.FriendlyUrls.xml
-D:\GitHub\TeamCrux\LotBankingCrux_v_1\LotBankingCrux_v_1\obj\Debug\LotBankingCrux_v_1.csprojResolveAssemblyReference.cache
 D:\GitHub\TeamCrux\LotBankingCrux_v_1\LotBankingCrux_v_1\obj\Debug\LotBankingCrux_v_1.dll
 D:\GitHub\TeamCrux\LotBankingCrux_v_1\LotBankingCrux_v_1\obj\Debug\LotBankingCrux_v_1.pdb
+D:\GitHub\TeamCrux\LotBankingCrux_v_1\LotBankingCrux_v_1\obj\Debug\LotBankingCrux_v_1.csprojResolveAssemblyReference.cache

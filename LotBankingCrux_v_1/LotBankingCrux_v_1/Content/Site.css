@@ -171,34 +171,7 @@ h5, h6 {
     }
 
 
-/*seems like I should manipulate this in the body not seperately*/
-.menubar {
-    background-color: #B8B8B8;
-    line-height: 30%;
-}
 
-.table {
-    display: table;
-    margin: -0px auto;
-}
-
-ul#horizontal-list {
-    min-width: 70%;
-    list-style: none;
-}
-
-
-    ul#horizontal-list li {
-        display: inline;
-        font-weight: bold;
-        font-size: 20px;
-        padding-left: 30px;
-    }
-
-li:hover {
-    color: white;
-    cursor: pointer;
-}
 
 footer {
     background-color: #e2e2e2;
