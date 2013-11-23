@@ -50,6 +50,31 @@ namespace LotBanking2.Crux
             return 1;
         }
 
+        public int setPassword(int id, String password)
+        {
+            SqlCommand updateLogin = new SqlCommand("UPDATE Login " +
+                                                       "SET password      = @password, " +
+                                                          " last_modified = NOW() " +
+                                                     "WHERE id            = @id",
+                                                       databaseConnection);
+            updateLogin.Parameters.Add("@password", SqlDbType.VarChar, 30).Value = password;
+            updateLogin.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            databaseConnection.Open();
+
+            SqlDataReader reader;
+            try
+            {
+                reader = updateLogin.ExecuteReader(CommandBehavior.SequentialAccess);
+            }
+            catch (Exception e)
+            {
+                return -1;
+            }
+            reader.Close();
+            databaseConnection.Close();
+            return 1;
+        }
+
         public int login(String login, String password)
         {
             
@@ -121,7 +146,7 @@ namespace LotBanking2.Crux
         public int insertBuilder(int builder_id, String name)
         {
             SqlCommand insertNewBuilder = new SqlCommand("INSERT INTO Builder_Data " +
-                                                                   "( builder_id, name ) " +
+                                                                   "( bid,        name ) " +
                                                              "VALUES( @builderId, @name)",
                                                              databaseConnection);
             insertNewBuilder.Parameters.Add("@builderId", SqlDbType.Int).Value = builder_id;
@@ -142,11 +167,36 @@ namespace LotBanking2.Crux
             return 1;
         }
 
+        public int updateBuilderName(int builder_id, String name)
+        {
+            SqlCommand updateBuilderName = new SqlCommand("Update Builder_Data " +
+                                                             "SET  name         = @name, " +
+                                                                " last_modified = NOW() " +
+                                                          "WHERE  bid           = @builderId)",
+                                                             databaseConnection);
+            updateBuilderName.Parameters.Add("@builderId", SqlDbType.Int).Value = builder_id;
+            updateBuilderName.Parameters.Add("@name", SqlDbType.VarChar, 30).Value = name;
+            databaseConnection.Open();
+
+            SqlDataReader reader;
+            try
+            {
+                reader = updateBuilderName.ExecuteReader(CommandBehavior.SequentialAccess);
+            }
+            catch (Exception e)
+            {
+                return -1;
+            }
+            reader.Close();
+            databaseConnection.Close();
+            return 1;
+        }
+
         public String getBuilderName(int id)
         {
             SqlCommand getBuildersName = new SqlCommand("SELECT name" +
                                                           "FROM Builder_Data" +
-                                                         "WHERE id = @id",
+                                                         "WHERE bid = @id",
                                                          databaseConnection);
             getBuildersName.Parameters.Add("@id", SqlDbType.Int).Value = id;
             SqlDataReader reader;
@@ -185,6 +235,60 @@ namespace LotBanking2.Crux
             try
             {
                 reader = insertNewBuilderDocument.ExecuteReader(CommandBehavior.SequentialAccess);
+            }
+            catch (Exception e)
+            {
+                return -1;
+            }
+            reader.Close();
+            databaseConnection.Close();
+            return 1;
+        }
+
+        public int requestBuilderDocument(int document_id)
+        {
+            SqlCommand requestBuilderDocument = new SqlCommand("UPDATE Builder_Documents " +
+                                                                    "SET last_requested = NOW() " +
+                                                                  "WHERE id = @documentId",
+                                                                     databaseConnection);
+
+            requestBuilderDocument.Parameters.Add("@documentId", SqlDbType.Int).Value = document_id;
+            
+            databaseConnection.Open();
+
+            SqlDataReader reader;
+            try
+            {
+                reader = requestBuilderDocument.ExecuteReader(CommandBehavior.SequentialAccess);
+            }
+            catch (Exception e)
+            {
+                return -1;
+            }
+            reader.Close();
+            databaseConnection.Close();
+            return 1;
+        }
+
+        public int updateBuilderDocumentFile(int document_id, byte doc, String file_name)
+        {
+            SqlCommand updateBuilderDocument = new SqlCommand("UPDATE Builder_Documents " +
+                                                                    "SET document      = @doc, " +
+                                                                       " file_name = @fileName, " +
+                                                                       " last_updated = NOW()" +
+                                                                  "WHERE id = @documentId",
+                                                                     databaseConnection);
+
+            updateBuilderDocument.Parameters.Add("@doc", SqlDbType.Binary).Value = doc;
+            updateBuilderDocument.Parameters.Add("@fileName", SqlDbType.VarChar, 30).Value = file_name;
+            updateBuilderDocument.Parameters.Add("@documentId", SqlDbType.Int).Value = document_id;
+
+            databaseConnection.Open();
+
+            SqlDataReader reader;
+            try
+            {
+                reader = updateBuilderDocument.ExecuteReader(CommandBehavior.SequentialAccess);
             }
             catch (Exception e)
             {
@@ -464,6 +568,35 @@ namespace LotBanking2.Crux
             return 1;
         }
 
+        public int updateProjectSchedule(int id, int projected_lots_purchased, Decimal projected_value_purchased, DateTime schedule_date)
+        {
+
+            SqlCommand updateNewProjectSchedule = new SqlCommand("UPDATE Project_Schedule" +
+                                                                      "( projected_lots_purchased, projected_value_purchased, schedule_date)" +
+                                                                      "  @projectedLotsPurchased,  @projectedValuePurchased,  @scheduleDate " +
+                                                                  "WHERE id = @id",
+                                                                 databaseConnection);
+            updateNewProjectSchedule.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            updateNewProjectSchedule.Parameters.Add("@projectedLotsPurchased", SqlDbType.Int).Value = projected_lots_purchased;
+            updateNewProjectSchedule.Parameters.Add("@projectedValuePurchased", SqlDbType.Decimal).Value = projected_value_purchased;
+            updateNewProjectSchedule.Parameters.Add("@scheduleDate", SqlDbType.DateTime).Value = schedule_date;
+
+            databaseConnection.Open();
+
+            SqlDataReader reader;
+            try
+            {
+                reader = updateNewProjectSchedule.ExecuteReader(CommandBehavior.SequentialAccess);
+            }
+            catch (Exception e)
+            {
+                return -1;
+            }
+            reader.Close();
+            databaseConnection.Close();
+            return 1;
+        }
+
         public ProjectSchedule[] getProjectSchedule(int project_id)
         {
             SqlCommand selectBuilderProjects = new SqlCommand("SELECT id, project_id, projected_lots_purchased, actual_lots_purchased, lots_sold," +
@@ -499,7 +632,7 @@ namespace LotBanking2.Crux
                     DateTime dc = reader.GetSqlDateTime(11).Value;
                     DateTime lm = reader.GetSqlDateTime(12).Value;
                     projectScheduleCount++;
-                    ProjectSchedule newProjectSchedule = new ProjectSchedule(i, project_id, pn, lat, lon, aq, ic, esv, lm);
+                    ProjectSchedule newProjectSchedule = new ProjectSchedule(i, project_id, plp, alp, ls, pvp, avp, pvs, avs, pd, ad, sd, dc, lm);
                     projectScheduleList.Add(newProjectSchedule);
                 }
                 projectSchedule = new ProjectSchedule[projectScheduleCount];
@@ -518,6 +651,146 @@ namespace LotBanking2.Crux
             databaseConnection.Close();
 
             return projectSchedule;
+        }
+
+        public int insertStep1Comment(int project_id, String text)
+        {
+            SqlCommand insertNewStep1Comment = new SqlCommand("UPDATE Step_One_Comments" +
+                                                                   "( project_id, text )" +
+                                                                   "  @projectId, @text",
+                                                                 databaseConnection);
+            insertNewStep1Comment.Parameters.Add("@projectId", SqlDbType.Int).Value = project_id;
+            insertNewStep1Comment.Parameters.Add("@text", SqlDbType.VarChar, 1024).Value = text;
+            
+
+            databaseConnection.Open();
+
+            SqlDataReader reader;
+            try
+            {
+                reader = insertNewStep1Comment.ExecuteReader(CommandBehavior.SequentialAccess);
+            }
+            catch (Exception e)
+            {
+                return -1;
+            }
+            reader.Close();
+            databaseConnection.Close();
+            return 1;
+        }
+
+        public NoteComment[] getStep1Comments(int project_id)
+        {
+            SqlCommand selectStep1Comments = new SqlCommand("SELECT id, text, date_created" +
+                                                                "FROM Step_One_Comments " +
+                                                               "WHERE project_id = @projectId",
+                                                                databaseConnection);
+            selectStep1Comments.Parameters.Add("@projectId", SqlDbType.Int).Value = project_id;
+
+            List<NoteComment> noteCommentList = new List<NoteComment>();
+            NoteComment[] noteComments = new NoteComment[0];
+            int noteCommentCount = 0;
+            databaseConnection.Open();
+
+            SqlDataReader reader;
+            try
+            {
+                reader = selectStep1Comments.ExecuteReader(CommandBehavior.SequentialAccess);
+                while (reader.Read())
+                {
+                    int i = reader.GetInt32(0);
+                    String t = reader.GetString(1);
+                    DateTime cd = reader.GetSqlDateTime(2).Value;
+
+                    noteCommentCount++;
+                    NoteComment newNoteComment = new NoteComment(i, t, cd);
+                    noteCommentList.Add(newNoteComment);
+                }
+                noteComments = new NoteComment[noteCommentCount];
+                List<NoteComment>.Enumerator noteCommentEnum = noteCommentList.GetEnumerator();
+                for (int i = 0; i < noteCommentCount; i++)
+                {
+                    noteComments[i] = noteCommentEnum.Current;
+                    noteCommentEnum.MoveNext();
+                }
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+            reader.Close();
+            databaseConnection.Close();
+            return noteComments;
+        }
+
+        public int insertStep1Note(int project_id, String text)
+        {
+            SqlCommand insertNewStep1Note = new SqlCommand("UPDATE Step_One_Notes" +
+                                                    "( project_id, text )" +
+                                                    "  @projectId, @text",
+                                                     databaseConnection);
+            insertNewStep1Note.Parameters.Add("@projectId", SqlDbType.Int).Value = project_id;
+            insertNewStep1Note.Parameters.Add("@text", SqlDbType.VarChar, 1024).Value = text;
+
+
+            databaseConnection.Open();
+
+            SqlDataReader reader;
+            try
+            {
+                reader = insertNewStep1Note.ExecuteReader(CommandBehavior.SequentialAccess);
+            }
+            catch (Exception e)
+            {
+                return -1;
+            }
+            reader.Close();
+            databaseConnection.Close();
+            return 1;
+        }
+
+        public NoteComment[] getStep1Notes(int project_id)
+        {
+            SqlCommand selectStep1Notes = new SqlCommand("SELECT id, text, date_created" +
+                                                                "FROM Step_One_Notes " +
+                                                               "WHERE project_id = @projectId",
+                                                                databaseConnection);
+            selectStep1Notes.Parameters.Add("@projectId", SqlDbType.Int).Value = project_id;
+
+            List<NoteComment> noteCommentList = new List<NoteComment>();
+            NoteComment[] noteComments= new NoteComment[0];
+            int noteCommentCount = 0;
+            databaseConnection.Open();
+
+            SqlDataReader reader;
+            try
+            {
+                reader = selectStep1Notes.ExecuteReader(CommandBehavior.SequentialAccess);
+                while (reader.Read())
+                {
+                    int i = reader.GetInt32(0);
+                    String t = reader.GetString(1);
+                    DateTime cd = reader.GetSqlDateTime(2).Value;
+
+                    noteCommentCount++;
+                    NoteComment newNoteComment = new NoteComment(i, t, cd);
+                    noteCommentList.Add(newNoteComment);
+                }
+                noteComments = new NoteComment[noteCommentCount];
+                List<NoteComment>.Enumerator noteCommentEnum = noteCommentList.GetEnumerator();
+                for (int i = 0; i < noteCommentCount; i++)
+                {
+                    noteComments[i] = noteCommentEnum.Current;
+                    noteCommentEnum.MoveNext();
+                }
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+            reader.Close();
+            databaseConnection.Close();
+            return noteComments;
         }
     }
 
@@ -795,6 +1068,34 @@ namespace LotBanking2.Crux
         {
             width = w;
             length = l;
+        }
+    }
+
+    public class NoteComment
+    {
+        private int id;
+        private String text;
+        private DateTime creationDate;
+        public NoteComment(int i, String t, DateTime cd)
+        {
+            id = i;
+            text = t;
+            creationDate = cd;
+        }
+
+        public int getId()
+        {
+            return id;
+        }
+
+        public String getText()
+        {
+            return text;
+        }
+
+        public DateTime getDate()
+        {
+            return creationDate;
         }
     }
 }
