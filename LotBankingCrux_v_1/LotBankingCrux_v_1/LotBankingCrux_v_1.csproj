@@ -192,6 +192,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Images\accent.png" />
+    <Content Include="Images\Sprites\builderLogo.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\delete_salesTraffic.png" />
     <Content Include="Images\heroAccent.png" />
@@ -206,6 +207,7 @@
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
     <Content Include="Images\pw_pattern.png" />
+    <Content Include="Images\texture.png" />
     <Content Include="Images\u0_normal.png" />
     <Content Include="Images\u10_normal.png" />
     <Content Include="Images\u12_normal.png" />
@@ -215,6 +217,7 @@
     <Content Include="Images\u6_normal.png" />
     <Content Include="Images\u8_normal.png" />
     <Content Include="packages.config" />
+    <Content Include="Content\Fonts\eyeglass-normal.ttf" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\bargraph-v1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
