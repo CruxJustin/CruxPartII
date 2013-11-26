@@ -97,11 +97,14 @@
                 </div>
                 <asp:Panel ID="Panel3" runat="server" CssClass="panel-style">
                     Name:<br />
-                    <div id="text1"><input class="textSize" type="text" /> </div><br />
+                    <!--<div id="text1"><input class="textSize" type="text" /> </div><br />-->
+                    <asp:TextBox ID="nameBox" Width="400px" runat = "server"></asp:TextBox><br />
                     Location:<br />
-                    <div id="text2"><input class="textSize" type="text" /> </div><br />
+                    <!--<div id="text2"><input class="textSize" type="text" /> </div><br />-->
+                    <asp:TextBox ID="locationBox" Width="400px" runat="server"></asp:TextBox><br />
                     # of Lots:<br />
-                    <div id="Div1"><input class="textSize" type="text" /> </div><br /><hr />
+                    <!--<div id="Div1"><input class="textSize" type="text" /> </div><br /><hr />-->
+                    <asp:TextBox ID="lotsBox" Width="400px" runat="server"></asp:TextBox><br />
                     Acquistion Price:<br />
                     <div id="Div2"><input class="textSize" type="text" /> </div><br />
                     Improvement Costs:<br />
