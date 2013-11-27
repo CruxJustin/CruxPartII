@@ -2,7 +2,6 @@
 
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-
     <!-- style setup for Maps API -->
     <style type="text/css">
         html {
@@ -38,6 +37,8 @@
         }
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
+    
+    
     <div class="menubar">
         <div class="table">
             <ul id="horizontal-list">
@@ -48,9 +49,8 @@
                 <li>LOCATION</li>
             </ul>
         </div>
-
-
     </div>
+
     <div class="colmask threecol">
 
         <div class="colmid">

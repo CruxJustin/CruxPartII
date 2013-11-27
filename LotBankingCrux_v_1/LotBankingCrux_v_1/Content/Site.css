@@ -53,6 +53,35 @@ h5, h6 {
 
 /* main layout
 ----------------------------------------------------------*/
+
+
+/*seems like I should manipulate this in the body not seperately*/
+.menubar {
+    background-color: #B8B8B8;
+ 
+}
+
+.table {
+    display: table;
+    margin: -0px auto -10px auto;
+}
+ul#horizontal-list {
+    min-width: 70%;
+    list-style: none;
+}  
+
+
+ul#horizontal-list li {
+    display: inline;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+li:hover {
+            color: white;
+            cursor: pointer;
+        }
 /* column container */
 .colmask {
     position: relative; /* This fixes the IE7 overflow hidden bug */
@@ -77,6 +106,7 @@ h5, h6 {
     position: relative;
     overflow: hidden;
 }
+
 /* 3 Column settings */
 .threecol {
     background: url('../Images/pw_pattern.png'); /* column's background colour */
@@ -245,6 +275,7 @@ ul#menu {
     ul#menu li {
         list-style: none;
         padding-left: 15px;
+        display: inline;
     }
 
         ul#menu li a {
