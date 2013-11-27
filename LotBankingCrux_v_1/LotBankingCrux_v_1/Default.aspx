@@ -37,8 +37,8 @@
         }
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
-    
-    
+
+
     <div class="menubar">
         <div class="table">
             <ul id="horizontal-list">
@@ -51,90 +51,79 @@
         </div>
     </div>
 
-    <div class="colmask threecol">
-
-        <div class="colmid">
-            <div class="colleft">
-                <div class="col1">
-                    <!-- Column 2 start -->
-                    <div class="position">
-                        <div class="graphcontainer">
-                            <div class="bar1" id="bar1">
-                                <div class="percent">
-                                    <span style="width: 100%;"></span>
-                                </div>
-                                <div class="circle">
-                                    <span>$0</span>
-                                </div>
-                                <div class="text">
-                                    <input type="text" class="input1" value="0" />
-                                    <small>Construction Cost over Expected Cost</small>
-                                </div>
+   
+    <asp:Panel ID="Panel1" runat="server" CssClass="panel-background">
+        <asp:Panel ID="Panel2" runat="server" CssClass="panel-parent">
+            <asp:Panel ID="Panel3" runat="server" CssClass="panel-style" Height="300px">
+                <div class="position">
+                    <div class="graphcontainer">
+                        <div class="bar1" id="bar1">
+                            <div class="percent">
+                                <span style="width: 100%;"></span>
                             </div>
-                            <div class="bar2" id="bar2">
-                                <div class="percent">
-                                    <span style="width: 100%;"></span>
-                                </div>
-                                <div class="circle">
-                                    <span>$0</span>
-                                </div>
-                                <div class="text">
-                                    <input type="text" class="input2" value="0" />
-                                    <small>Lots purchased over lots available</small>
-                                </div>
+                            <div class="circle">
+                                <span>$0</span>
                             </div>
-                            <div class="bar3" id="bar3">
-                                <div class="percent">
-                                    <span style="width: 100%;"></span>
-                                </div>
-                                <div class="circle">
-                                    <span>$0</span>
-                                </div>
-                                <div class="text">
-                                    <input type="text" class="input3" value="0" />
-                                    <small>Lots sold over lots available</small>
-                                </div>
+                            <div class="text">
+                                <input type="text" class="input1" value="0" />
+                                <small>Construction Cost over Expected Cost</small>
                             </div>
                         </div>
-                        <div class="bottomhalf">
-                            <div class="tscontainer">
-                                <img src="http://localhost:4838/Images/delete_salesTraffic.png" height="100%" width="100%" />
+                        <div class="bar2" id="bar2">
+                            <div class="percent">
+                                <span style="width: 100%;"></span>
                             </div>
-                            <div class="mapcontainer">
-                                <!-- Map display -->
-                                <div id="map-canvas"></div>
+                            <div class="circle">
+                                <span>$0</span>
+                            </div>
+                            <div class="text">
+                                <input type="text" class="input2" value="0" />
+                                <small>Lots purchased over lots available</small>
                             </div>
                         </div>
-                        <!-- Column 2 end -->
+                        <div class="bar3" id="bar3">
+                            <div class="percent">
+                                <span style="width: 100%;"></span>
+                            </div>
+                            <div class="circle">
+                                <span>$0</span>
+                            </div>
+                            <div class="text">
+                                <input type="text" class="input3" value="0" />
+                                <small>Lots sold over lots available</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col2">
-                    <!-- Column 1 start -->
-                    <table class="tasklist">
-                        <tr>
-                            <th>TASK LIST</th>
-                        </tr>
-                        <tr>
-                            <td>row 1, cell 1</td>
-                        </tr>
-                        <tr>
-                            <td>row 1, cell 2</td>
-                        </tr>
-                    </table>
+            </asp:Panel>
+            <asp:Panel ID="Panel4" runat="server" CssClass="panel-style" Height="300px">
+                <div class="tscontainer">
+                    <img src="http://localhost:4838/Images/delete_salesTraffic.png" height="100%" width="100%" />
+                </div>
+                <div class="mapcontainer">
+                    <!-- Map display -->
+                    <div id="map-canvas"></div>
+                </div>
+            </asp:Panel>
 
 
-                    <!-- Column 1 end -->
-                </div>
-                <div class="col3">
-                    <!-- Column 3 start -->
-                    <div class="title">
-                        Builders
-                    </div>
-                    <!-- Column 3 end -->
-                </div>
-            </div>
-        </div>
+        </asp:Panel>
+    </asp:Panel>
+    <!-- These guys need to be added to the sides of the page 
+     <table class="tasklist">
+        <tr>
+            <th>TASK LIST</th>
+        </tr>
+        <tr>
+            <td>row 1, cell 1</td>
+        </tr>
+        <tr>
+            <td>row 1, cell 2</td>
+        </tr>
+    </table>
+
+    <div class="title">
+        Builders
     </div>
-
-
+        -->
 </asp:Content>

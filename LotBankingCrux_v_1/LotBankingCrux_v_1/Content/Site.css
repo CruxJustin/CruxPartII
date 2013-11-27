@@ -106,34 +106,59 @@ li:hover {
     position: relative;
     overflow: hidden;
 }
+ .panel-parent {
+            display: block;
+            border: thin outset #C0C0C0;
+            background-color: #D8D8D8;
+            margin: 0 auto;
+            height: 830px;
+            width: 82%;
+        }
 
-/* 3 Column settings */
+        .panel-background {
+            background-image: url('/Images/texture.png');
+            background-repeat: repeat;
+            height: 100%;
+            width: 100%;
+        }
+
+        .panel-style {
+            background-color: #F0F0F0;
+            display: block;
+            margin: 0 auto;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            height: 75%;
+            width: 80%;
+        }
+
+/* 3 Column settings /
 .threecol {
-    background: url('../Images/pw_pattern.png'); /* column's background colour */
+    background: url('../Images/pw_pattern.png'); /* column's background colour /
 }
 
     .threecol .colmid {
-        right: 15%; /* width of the right column */
+        right: 15%; /* width of the right column /
     }
 
     .threecol .colleft {
-        right: 70%; /* width of the middle column */
+        right: 70%; /* width of the middle column/
     }
 
     .threecol .col1 {
-        width: 64%; /* width of center column content (column width minus padding on either side) */
-        left: 105%; /* 100% plus left padding of center column */
+        width: 64%; /* width of center column content (column width minus padding on either side) /
+        left: 105%; /* 100% plus left padding of center column /
         background: #CCCCCC;
     }
 
-        /*only works because of the current size of the objects. Value should change upon correct implementation*/
+        /*only works because of the current size of the objects. Value should change upon correct implementation/
         .threecol .col1 .position {
             margin-left: 5%;
             margin-right: 5%;
             height: 800px;
             padding-bottom: 10px;
         }
-
+        */
 .graphcontainer {
     background-color: white;
     height: 42%;
