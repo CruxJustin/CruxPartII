@@ -3,40 +3,40 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.IO;
+using MySql.Data.MySqlClient;
 
 namespace LotBanking2.Crux
 {
     public class CruxDB
     {
         //Database connection constants
-        private string dataSource = "";
-        private string initialCatalog = "";
-        private string databaseUser = "";
-        private string databasePassword = "";
+        private string server = "SERVER="+"localhost"+";";
+        private string database = "DATABASE="+"CBH"+";";
+        private string user = "UID="+""+";";
+        private string password = "PASSWORD="+""+";";
 
-        private SqlConnection databaseConnection;
+        private MySqlConnection databaseConnection;
         
         public CruxDB()
         {
-            databaseConnection = new SqlConnection(dataSource  + initialCatalog + databaseUser + databasePassword);
+            databaseConnection = new MySqlConnection(server + database + user + password);
         }
 
         public int insertLogin(String login, String password, int user_class_id, int option_mask)
         {
-            SqlCommand insertNewLogin = new SqlCommand("INSERT INTO Login " +
+            MySqlCommand insertNewLogin = new MySqlCommand("INSERT INTO Login " +
                                                               "(login,  password,  user_class_id, option_mask)" +
                                                        "VALUES(@login, @password, @userClassId,  @optionMask)",
                                                        databaseConnection);
-            insertNewLogin.Parameters.Add("@login", SqlDbType.VarChar, 30).Value = login;
-            insertNewLogin.Parameters.Add("@password", SqlDbType.VarChar, 30).Value = password;
-            insertNewLogin.Parameters.Add("@userClassId", SqlDbType.Int).Value = user_class_id;
-            insertNewLogin.Parameters.Add("@optionMask", SqlDbType.Int).Value = option_mask;
+            insertNewLogin.Parameters.Add("@login", MySqlDbType.VarChar, 30).Value = login;
+            insertNewLogin.Parameters.Add("@password", MySqlDbType.VarChar, 30).Value = password;
+            insertNewLogin.Parameters.Add("@userClassId", MySqlDbType.Int32).Value = user_class_id;
+            insertNewLogin.Parameters.Add("@optionMask", MySqlDbType.Int32).Value = option_mask;
 
             databaseConnection.Open();
 
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = insertNewLogin.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -52,16 +52,16 @@ namespace LotBanking2.Crux
 
         public int setPassword(int id, String password)
         {
-            SqlCommand updateLogin = new SqlCommand("UPDATE Login " +
+            MySqlCommand updateLogin = new MySqlCommand("UPDATE Login " +
                                                        "SET password      = @password, " +
                                                           " last_modified = NOW() " +
                                                      "WHERE id            = @id",
                                                        databaseConnection);
-            updateLogin.Parameters.Add("@password", SqlDbType.VarChar, 30).Value = password;
-            updateLogin.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            updateLogin.Parameters.Add("@password", MySqlDbType.VarChar, 30).Value = password;
+            updateLogin.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
             databaseConnection.Open();
 
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = updateLogin.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -80,15 +80,15 @@ namespace LotBanking2.Crux
             
             
             
-            SqlCommand getLoginData = new SqlCommand("SELECT id " +
+            MySqlCommand getLoginData = new MySqlCommand("SELECT id " +
                                                        "FROM Login " +
                                                       "WHERE login = '@login'," +
                                                         "AND password = '@password'", databaseConnection);
-            getLoginData.Parameters.Add("@login", SqlDbType.VarChar, 30).Value = login;
-            getLoginData.Parameters.Add("@password", SqlDbType.VarChar, 30).Value = password;
+            getLoginData.Parameters.Add("@login", MySqlDbType.VarChar, 30).Value = login;
+            getLoginData.Parameters.Add("@password", MySqlDbType.VarChar, 30).Value = password;
             databaseConnection.Open();
             int id = -1;
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = getLoginData.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -113,15 +113,15 @@ namespace LotBanking2.Crux
         public int getUserClassId(int loginId)
         {
 
-            SqlCommand getLoginData = new SqlCommand("SELECT user_class_id " +
+            MySqlCommand getLoginData = new MySqlCommand("SELECT user_class_id " +
                                                        "FROM Login " +
                                                       "WHERE id = @id",
                                                       databaseConnection);
-            getLoginData.Parameters.Add("@login", SqlDbType.Int).Value = loginId;
+            getLoginData.Parameters.Add("@login", MySqlDbType.Int32).Value = loginId;
 
             databaseConnection.Open();
             int id = -1;
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = getLoginData.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -145,15 +145,15 @@ namespace LotBanking2.Crux
 
         public int insertBuilder(int builder_id, String name)
         {
-            SqlCommand insertNewBuilder = new SqlCommand("INSERT INTO Builder_Data " +
+            MySqlCommand insertNewBuilder = new MySqlCommand("INSERT INTO Builder_Data " +
                                                                    "( bid,        name ) " +
                                                              "VALUES( @builderId, @name)",
                                                              databaseConnection);
-            insertNewBuilder.Parameters.Add("@builderId", SqlDbType.Int).Value = builder_id;
-            insertNewBuilder.Parameters.Add("@name", SqlDbType.VarChar, 30).Value = name;
+            insertNewBuilder.Parameters.Add("@builderId", MySqlDbType.Int32).Value = builder_id;
+            insertNewBuilder.Parameters.Add("@name", MySqlDbType.VarChar, 30).Value = name;
             databaseConnection.Open();
 
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = insertNewBuilder.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -169,16 +169,16 @@ namespace LotBanking2.Crux
 
         public int updateBuilderName(int builder_id, String name)
         {
-            SqlCommand updateBuilderName = new SqlCommand("Update Builder_Data " +
+            MySqlCommand updateBuilderName = new MySqlCommand("Update Builder_Data " +
                                                              "SET  name         = @name, " +
                                                                 " last_modified = NOW() " +
                                                           "WHERE  bid           = @builderId)",
                                                              databaseConnection);
-            updateBuilderName.Parameters.Add("@builderId", SqlDbType.Int).Value = builder_id;
-            updateBuilderName.Parameters.Add("@name", SqlDbType.VarChar, 30).Value = name;
+            updateBuilderName.Parameters.Add("@builderId", MySqlDbType.Int32).Value = builder_id;
+            updateBuilderName.Parameters.Add("@name", MySqlDbType.VarChar, 30).Value = name;
             databaseConnection.Open();
 
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = updateBuilderName.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -194,12 +194,12 @@ namespace LotBanking2.Crux
 
         public String getBuilderName(int id)
         {
-            SqlCommand getBuildersName = new SqlCommand("SELECT name" +
+            MySqlCommand getBuildersName = new MySqlCommand("SELECT name" +
                                                           "FROM Builder_Data" +
                                                          "WHERE bid = @id",
                                                          databaseConnection);
-            getBuildersName.Parameters.Add("@id", SqlDbType.Int).Value = id;
-            SqlDataReader reader;
+            getBuildersName.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
+            MySqlDataReader reader;
             String name = "";
             try
             {
@@ -220,18 +220,18 @@ namespace LotBanking2.Crux
 
         public int insertBuilderDocument(int builderId, String docName, byte[] doc)
         {
-            SqlCommand insertNewBuilderDocument = new SqlCommand("INSERT INTO Builder_Documents" +
+            MySqlCommand insertNewBuilderDocument = new MySqlCommand("INSERT INTO Builder_Documents" +
                                                                            "( builder_id, document_name, document)" +
                                                                      "VALUES( @builderId, @documentName, @document)",
                                                                      databaseConnection);
 
-            insertNewBuilderDocument.Parameters.Add("@builderId", SqlDbType.Int).Value = builderId;
-            insertNewBuilderDocument.Parameters.Add("@documentName", SqlDbType.VarChar, 30);
-            insertNewBuilderDocument.Parameters.Add("@document", SqlDbType.Binary, doc.Length);
+            insertNewBuilderDocument.Parameters.Add("@builderId", MySqlDbType.Int32).Value = builderId;
+            insertNewBuilderDocument.Parameters.Add("@documentName", MySqlDbType.VarChar, 30);
+            insertNewBuilderDocument.Parameters.Add("@document", MySqlDbType.Binary, doc.Length);
 
             databaseConnection.Open();
 
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = insertNewBuilderDocument.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -247,16 +247,16 @@ namespace LotBanking2.Crux
 
         public int requestBuilderDocument(int document_id)
         {
-            SqlCommand requestBuilderDocument = new SqlCommand("UPDATE Builder_Documents " +
+            MySqlCommand requestBuilderDocument = new MySqlCommand("UPDATE Builder_Documents " +
                                                                     "SET last_requested = NOW() " +
                                                                   "WHERE id = @documentId",
                                                                      databaseConnection);
 
-            requestBuilderDocument.Parameters.Add("@documentId", SqlDbType.Int).Value = document_id;
+            requestBuilderDocument.Parameters.Add("@documentId", MySqlDbType.Int32).Value = document_id;
             
             databaseConnection.Open();
 
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = requestBuilderDocument.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -272,20 +272,20 @@ namespace LotBanking2.Crux
 
         public int updateBuilderDocumentFile(int document_id, byte doc, String file_name)
         {
-            SqlCommand updateBuilderDocument = new SqlCommand("UPDATE Builder_Documents " +
+            MySqlCommand updateBuilderDocument = new MySqlCommand("UPDATE Builder_Documents " +
                                                                     "SET document      = @doc, " +
                                                                        " file_name = @fileName, " +
                                                                        " last_updated = NOW()" +
                                                                   "WHERE id = @documentId",
                                                                      databaseConnection);
 
-            updateBuilderDocument.Parameters.Add("@doc", SqlDbType.Binary).Value = doc;
-            updateBuilderDocument.Parameters.Add("@fileName", SqlDbType.VarChar, 30).Value = file_name;
-            updateBuilderDocument.Parameters.Add("@documentId", SqlDbType.Int).Value = document_id;
+            updateBuilderDocument.Parameters.Add("@doc", MySqlDbType.Binary).Value = doc;
+            updateBuilderDocument.Parameters.Add("@fileName", MySqlDbType.VarChar, 30).Value = file_name;
+            updateBuilderDocument.Parameters.Add("@documentId", MySqlDbType.Int32).Value = document_id;
 
             databaseConnection.Open();
 
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = updateBuilderDocument.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -301,18 +301,18 @@ namespace LotBanking2.Crux
 
         public BuilderDocumentData[] getBuilderDocumentData(int builder_id)
         {
-            SqlCommand selectBuilderDocumentData = new SqlCommand("SELECT id, builder_id, document_name, file_name, last_modified, last_requested " +
+            MySqlCommand selectBuilderDocumentData = new MySqlCommand("SELECT id, builder_id, document_name, file_name, last_modified, last_requested " +
                                                                  "FROM Builder_Documents " +
                                                                 "WHERE buider_id = @builderId",
                                                                 databaseConnection);
-            selectBuilderDocumentData.Parameters.Add("@builderId", SqlDbType.Int).Value = builder_id;
+            selectBuilderDocumentData.Parameters.Add("@builderId", MySqlDbType.Int32).Value = builder_id;
 
             List<BuilderDocumentData> doclist = new List<BuilderDocumentData>();
             BuilderDocumentData[] docs = new BuilderDocumentData[0];
             int docCount = 0;
             databaseConnection.Open();
 
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = selectBuilderDocumentData.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -322,8 +322,8 @@ namespace LotBanking2.Crux
                     int bid = reader.GetInt32(1);
                     String dn = reader.GetString(2);
                     String fn = reader.GetString(3);
-                    DateTime lm = reader.GetSqlDateTime(4).Value;
-                    DateTime lr = reader.GetSqlDateTime(5).Value;
+                    DateTime lm = reader.GetDateTime(4);
+                    DateTime lr = reader.GetDateTime(5);
                     docCount++;
                     BuilderDocumentData newDoc = new BuilderDocumentData(i, bid, dn, fn, lm, lr);
                     doclist.Add(newDoc);
@@ -350,15 +350,15 @@ namespace LotBanking2.Crux
         {
             byte[] doc = new byte[0];
 
-            SqlCommand selectBuilderDocument = new SqlCommand("SELECT document " +
+            MySqlCommand selectBuilderDocument = new MySqlCommand("SELECT document " +
                                                      "FROM Builder_Documents " +
                                                     "WHERE id = @id",
                                                     databaseConnection);
-            selectBuilderDocument.Parameters.Add("@id", SqlDbType.Int);
+            selectBuilderDocument.Parameters.Add("@id", MySqlDbType.Int32);
             
             databaseConnection.Open();
 
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = selectBuilderDocument.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -383,21 +383,21 @@ namespace LotBanking2.Crux
 
         public int insertPoject(int builder_id, String project_name, float latitude, float longitude, Decimal aquisition_price, Decimal improvement_cost, Decimal estimated_sale_value)
         {
-            SqlCommand insertNewProject = new SqlCommand("INSERT INTO Project" +
+            MySqlCommand insertNewProject = new MySqlCommand("INSERT INTO Project" +
                                                                    "( builder_id, project_name, latitude,   longitude, aquisition_price, improvement_cost, estimated_sale_value)" +
                                                              "VALUES( @builderId, @projectName, @latitude, @longitude, @aquisitionPrice, @improvementCost, @estimatedSaleValue )",
                                                              databaseConnection);
-            insertNewProject.Parameters.Add("@builderId", SqlDbType.Int).Value = builder_id;
-            insertNewProject.Parameters.Add("@projectName", SqlDbType.Int).Value = project_name;
-            insertNewProject.Parameters.Add("@latitude", SqlDbType.Float).Value = latitude;
-            insertNewProject.Parameters.Add("@longitude", SqlDbType.Float).Value = longitude;
-            insertNewProject.Parameters.Add("@aqusitoinPrice", SqlDbType.Decimal).Value = aquisition_price;
-            insertNewProject.Parameters.Add("@improvementCost", SqlDbType.Decimal).Value = improvement_cost;
-            insertNewProject.Parameters.Add("@estimatedSaleValue", SqlDbType.Decimal).Value = estimated_sale_value;
+            insertNewProject.Parameters.Add("@builderId", MySqlDbType.Int32).Value = builder_id;
+            insertNewProject.Parameters.Add("@projectName", MySqlDbType.Int32).Value = project_name;
+            insertNewProject.Parameters.Add("@latitude", MySqlDbType.Float).Value = latitude;
+            insertNewProject.Parameters.Add("@longitude", MySqlDbType.Float).Value = longitude;
+            insertNewProject.Parameters.Add("@aqusitoinPrice", MySqlDbType.Decimal).Value = aquisition_price;
+            insertNewProject.Parameters.Add("@improvementCost", MySqlDbType.Decimal).Value = improvement_cost;
+            insertNewProject.Parameters.Add("@estimatedSaleValue", MySqlDbType.Decimal).Value = estimated_sale_value;
 
             databaseConnection.Open();
 
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = insertNewProject.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -414,18 +414,18 @@ namespace LotBanking2.Crux
         public Project[] getProjects(int builder_id)
         {
 
-            SqlCommand selectBuilderProjects = new SqlCommand("SELECT id, project_name, latitude, longitude, aquisition_price, improvement_cost, estimated_sale_value, last_modified" +
+            MySqlCommand selectBuilderProjects = new MySqlCommand("SELECT id, project_name, latitude, longitude, aquisition_price, improvement_cost, estimated_sale_value, last_modified" +
                                                                  "FROM Projects " +
                                                                 "WHERE buider_id = @builderId",
                                                                 databaseConnection);
-            selectBuilderProjects.Parameters.Add("@builderId", SqlDbType.Int).Value = builder_id;
+            selectBuilderProjects.Parameters.Add("@builderId", MySqlDbType.Int32).Value = builder_id;
 
             List<Project> projectList = new List<Project>();
             Project[] projects = new Project[0];
             int projectCount = 0;
             databaseConnection.Open();
 
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = selectBuilderProjects.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -438,7 +438,7 @@ namespace LotBanking2.Crux
                     Decimal aq = reader.GetDecimal(4);
                     Decimal ic = reader.GetDecimal(5);
                     Decimal esv = reader.GetDecimal(6);
-                    DateTime lm = reader.GetSqlDateTime(7).Value;
+                    DateTime lm = reader.GetDateTime(7);
                     projectCount++;
                     Project newProject = new Project(i, builder_id, pn, lat, lon, aq, ic, esv, lm);
                     projectList.Add(newProject);
@@ -463,20 +463,20 @@ namespace LotBanking2.Crux
 
         public int insertLotType(int project_id, int lot_width, int lot_length, int count, Double purchase_price, Decimal release_price, Decimal sale_price)
         {
-            SqlCommand insertNewLotType = new SqlCommand("INSERT INTO Lot_Types" +
+            MySqlCommand insertNewLotType = new MySqlCommand("INSERT INTO Lot_Types" +
                                                                    "( project_id, lot_width, lot_length,  count, purchase_price, release_price, sale_price)" +
                                                              "VALUES( @projectId, @lotWidth, @lotLength, @count, @purchasePrice, @releasePrice, @salePrice)",
                                                              databaseConnection);
-            insertNewLotType.Parameters.Add("@projectId", SqlDbType.Int).Value = project_id;
-            insertNewLotType.Parameters.Add("@lotWidth", SqlDbType.Int).Value = lot_width;
-            insertNewLotType.Parameters.Add("@lotLenght", SqlDbType.Int).Value = lot_length;
-            insertNewLotType.Parameters.Add("@count", SqlDbType.Int).Value = count;
-            insertNewLotType.Parameters.Add("@purchasePrice", SqlDbType.Decimal).Value = purchase_price;
-            insertNewLotType.Parameters.Add("@releasePrice", SqlDbType.Decimal).Value = release_price;
-            insertNewLotType.Parameters.Add("@salePrice", SqlDbType.Decimal).Value = sale_price;
+            insertNewLotType.Parameters.Add("@projectId", MySqlDbType.Int32).Value = project_id;
+            insertNewLotType.Parameters.Add("@lotWidth", MySqlDbType.Int32).Value = lot_width;
+            insertNewLotType.Parameters.Add("@lotLenght", MySqlDbType.Int32).Value = lot_length;
+            insertNewLotType.Parameters.Add("@count", MySqlDbType.Int32).Value = count;
+            insertNewLotType.Parameters.Add("@purchasePrice", MySqlDbType.Decimal).Value = purchase_price;
+            insertNewLotType.Parameters.Add("@releasePrice", MySqlDbType.Decimal).Value = release_price;
+            insertNewLotType.Parameters.Add("@salePrice", MySqlDbType.Decimal).Value = sale_price;
             databaseConnection.Open();
 
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = insertNewLotType.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -492,18 +492,18 @@ namespace LotBanking2.Crux
 
         public LotType[] getLotTypes(int project_id)
         {
-            SqlCommand selectLotTypes = new SqlCommand("SELECT id, lot_width, lot_length, lot_count, purchase_count, sold_count, purchase_price, release_price, sale_price" +
+            MySqlCommand selectLotTypes = new MySqlCommand("SELECT id, lot_width, lot_length, lot_count, purchase_count, sold_count, purchase_price, release_price, sale_price" +
                                                                  "FROM Projects " +
                                                                 "WHERE project_id = @projectId",
                                                                 databaseConnection);
-            selectLotTypes.Parameters.Add("@projectId", SqlDbType.Int).Value = project_id;
+            selectLotTypes.Parameters.Add("@projectId", MySqlDbType.Int32).Value = project_id;
 
             List<LotType> lotTypeList = new List<LotType>();
             LotType[] lotTypes = new LotType[0];
             int lotTypeCount = 0;
             databaseConnection.Open();
 
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = selectLotTypes.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -543,18 +543,18 @@ namespace LotBanking2.Crux
         public int insertProjectSchedule(int project_id, int projected_lots_purchased, Decimal projected_value_purchased, DateTime schedule_date)
         {
 
-            SqlCommand insertNewProjectSchedule = new SqlCommand("INSERT INTO Project_Schedule" +
+            MySqlCommand insertNewProjectSchedule = new MySqlCommand("INSERT INTO Project_Schedule" +
                                                                            "( project_id, projected_lots_purchased, projected_value_purchased, schedule_date)" +
                                                                      "VALUES( @projectId, @projectedLotsPurchased,  @projectedValuePurchased,  @scheduleDate)",
                                                                  databaseConnection);
-            insertNewProjectSchedule.Parameters.Add("@projectId", SqlDbType.Int).Value = project_id;
-            insertNewProjectSchedule.Parameters.Add("@projectedLotsPurchased", SqlDbType.Int).Value = projected_lots_purchased;
-            insertNewProjectSchedule.Parameters.Add("@projectedValuePurchased", SqlDbType.Decimal).Value = projected_value_purchased;
-            insertNewProjectSchedule.Parameters.Add("@scheduleDate", SqlDbType.DateTime).Value = schedule_date;
+            insertNewProjectSchedule.Parameters.Add("@projectId", MySqlDbType.Int32).Value = project_id;
+            insertNewProjectSchedule.Parameters.Add("@projectedLotsPurchased", MySqlDbType.Int32).Value = projected_lots_purchased;
+            insertNewProjectSchedule.Parameters.Add("@projectedValuePurchased", MySqlDbType.Decimal).Value = projected_value_purchased;
+            insertNewProjectSchedule.Parameters.Add("@scheduleDate", MySqlDbType.DateTime).Value = schedule_date;
 
             databaseConnection.Open();
 
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = insertNewProjectSchedule.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -571,19 +571,19 @@ namespace LotBanking2.Crux
         public int updateProjectSchedule(int id, int projected_lots_purchased, Decimal projected_value_purchased, DateTime schedule_date)
         {
 
-            SqlCommand updateNewProjectSchedule = new SqlCommand("UPDATE Project_Schedule" +
+            MySqlCommand updateNewProjectSchedule = new MySqlCommand("UPDATE Project_Schedule" +
                                                                       "( projected_lots_purchased, projected_value_purchased, schedule_date)" +
                                                                       "  @projectedLotsPurchased,  @projectedValuePurchased,  @scheduleDate " +
                                                                   "WHERE id = @id",
                                                                  databaseConnection);
-            updateNewProjectSchedule.Parameters.Add("@id", SqlDbType.Int).Value = id;
-            updateNewProjectSchedule.Parameters.Add("@projectedLotsPurchased", SqlDbType.Int).Value = projected_lots_purchased;
-            updateNewProjectSchedule.Parameters.Add("@projectedValuePurchased", SqlDbType.Decimal).Value = projected_value_purchased;
-            updateNewProjectSchedule.Parameters.Add("@scheduleDate", SqlDbType.DateTime).Value = schedule_date;
+            updateNewProjectSchedule.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
+            updateNewProjectSchedule.Parameters.Add("@projectedLotsPurchased", MySqlDbType.Int32).Value = projected_lots_purchased;
+            updateNewProjectSchedule.Parameters.Add("@projectedValuePurchased", MySqlDbType.Decimal).Value = projected_value_purchased;
+            updateNewProjectSchedule.Parameters.Add("@scheduleDate", MySqlDbType.DateTime).Value = schedule_date;
 
             databaseConnection.Open();
 
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = updateNewProjectSchedule.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -599,20 +599,20 @@ namespace LotBanking2.Crux
 
         public ProjectSchedule[] getProjectSchedule(int project_id)
         {
-            SqlCommand selectBuilderProjects = new SqlCommand("SELECT id, project_id, projected_lots_purchased, actual_lots_purchased, lots_sold," +
+            MySqlCommand selectBuilderProjects = new MySqlCommand("SELECT id, project_id, projected_lots_purchased, actual_lots_purchased, lots_sold," +
                                                                      "projected_value_purchased, actual_value_purchased, value_sold, projected_draw," +
                                                                      "actual_draw, schedule_date, date_created, last_modified" +
                                                                  "FROM Project_Schedule " +
                                                                 "WHERE project_id = @projectId",
                                                                 databaseConnection);
-            selectBuilderProjects.Parameters.Add("@projectId", SqlDbType.Int).Value = project_id;
+            selectBuilderProjects.Parameters.Add("@projectId", MySqlDbType.Int32).Value = project_id;
 
             List<ProjectSchedule> projectScheduleList = new List<ProjectSchedule>();
             ProjectSchedule[] projectSchedule = new ProjectSchedule[0];
             int projectScheduleCount = 0;
             databaseConnection.Open();
 
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = selectBuilderProjects.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -628,9 +628,9 @@ namespace LotBanking2.Crux
                     Decimal avs = reader.GetDecimal(7);
                     Decimal pd = reader.GetDecimal(8);
                     Decimal ad = reader.GetDecimal(9);
-                    DateTime sd = reader.GetSqlDateTime(10).Value;
-                    DateTime dc = reader.GetSqlDateTime(11).Value;
-                    DateTime lm = reader.GetSqlDateTime(12).Value;
+                    DateTime sd = reader.GetDateTime(10);
+                    DateTime dc = reader.GetDateTime(11);
+                    DateTime lm = reader.GetDateTime(12);
                     projectScheduleCount++;
                     ProjectSchedule newProjectSchedule = new ProjectSchedule(i, project_id, plp, alp, ls, pvp, avp, pvs, avs, pd, ad, sd, dc, lm);
                     projectScheduleList.Add(newProjectSchedule);
@@ -655,17 +655,17 @@ namespace LotBanking2.Crux
 
         public int insertStep1Comment(int project_id, String text)
         {
-            SqlCommand insertNewStep1Comment = new SqlCommand("UPDATE Step_One_Comments" +
+            MySqlCommand insertNewStep1Comment = new MySqlCommand("UPDATE Step_One_Comments" +
                                                                    "( project_id, text )" +
                                                                    "  @projectId, @text",
                                                                  databaseConnection);
-            insertNewStep1Comment.Parameters.Add("@projectId", SqlDbType.Int).Value = project_id;
-            insertNewStep1Comment.Parameters.Add("@text", SqlDbType.VarChar, 1024).Value = text;
+            insertNewStep1Comment.Parameters.Add("@projectId", MySqlDbType.Int32).Value = project_id;
+            insertNewStep1Comment.Parameters.Add("@text", MySqlDbType.VarChar, 1024).Value = text;
             
 
             databaseConnection.Open();
 
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = insertNewStep1Comment.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -681,18 +681,18 @@ namespace LotBanking2.Crux
 
         public NoteComment[] getStep1Comments(int project_id)
         {
-            SqlCommand selectStep1Comments = new SqlCommand("SELECT id, text, date_created" +
+            MySqlCommand selectStep1Comments = new MySqlCommand("SELECT id, text, date_created" +
                                                                 "FROM Step_One_Comments " +
                                                                "WHERE project_id = @projectId",
                                                                 databaseConnection);
-            selectStep1Comments.Parameters.Add("@projectId", SqlDbType.Int).Value = project_id;
+            selectStep1Comments.Parameters.Add("@projectId", MySqlDbType.Int32).Value = project_id;
 
             List<NoteComment> noteCommentList = new List<NoteComment>();
             NoteComment[] noteComments = new NoteComment[0];
             int noteCommentCount = 0;
             databaseConnection.Open();
 
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = selectStep1Comments.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -700,7 +700,7 @@ namespace LotBanking2.Crux
                 {
                     int i = reader.GetInt32(0);
                     String t = reader.GetString(1);
-                    DateTime cd = reader.GetSqlDateTime(2).Value;
+                    DateTime cd = reader.GetDateTime(2);
 
                     noteCommentCount++;
                     NoteComment newNoteComment = new NoteComment(i, t, cd);
@@ -725,17 +725,17 @@ namespace LotBanking2.Crux
 
         public int insertStep1Note(int project_id, String text)
         {
-            SqlCommand insertNewStep1Note = new SqlCommand("UPDATE Step_One_Notes" +
+            MySqlCommand insertNewStep1Note = new MySqlCommand("UPDATE Step_One_Notes" +
                                                     "( project_id, text )" +
                                                     "  @projectId, @text",
                                                      databaseConnection);
-            insertNewStep1Note.Parameters.Add("@projectId", SqlDbType.Int).Value = project_id;
-            insertNewStep1Note.Parameters.Add("@text", SqlDbType.VarChar, 1024).Value = text;
+            insertNewStep1Note.Parameters.Add("@projectId", MySqlDbType.Int32).Value = project_id;
+            insertNewStep1Note.Parameters.Add("@text", MySqlDbType.VarChar, 1024).Value = text;
 
 
             databaseConnection.Open();
 
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = insertNewStep1Note.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -751,18 +751,18 @@ namespace LotBanking2.Crux
 
         public NoteComment[] getStep1Notes(int project_id)
         {
-            SqlCommand selectStep1Notes = new SqlCommand("SELECT id, text, date_created" +
+            MySqlCommand selectStep1Notes = new MySqlCommand("SELECT id, text, date_created" +
                                                                 "FROM Step_One_Notes " +
                                                                "WHERE project_id = @projectId",
                                                                 databaseConnection);
-            selectStep1Notes.Parameters.Add("@projectId", SqlDbType.Int).Value = project_id;
+            selectStep1Notes.Parameters.Add("@projectId", MySqlDbType.Int32).Value = project_id;
 
             List<NoteComment> noteCommentList = new List<NoteComment>();
             NoteComment[] noteComments= new NoteComment[0];
             int noteCommentCount = 0;
             databaseConnection.Open();
 
-            SqlDataReader reader;
+            MySqlDataReader reader;
             try
             {
                 reader = selectStep1Notes.ExecuteReader(CommandBehavior.SequentialAccess);
@@ -770,7 +770,7 @@ namespace LotBanking2.Crux
                 {
                     int i = reader.GetInt32(0);
                     String t = reader.GetString(1);
-                    DateTime cd = reader.GetSqlDateTime(2).Value;
+                    DateTime cd = reader.GetDateTime(2);
 
                     noteCommentCount++;
                     NoteComment newNoteComment = new NoteComment(i, t, cd);
