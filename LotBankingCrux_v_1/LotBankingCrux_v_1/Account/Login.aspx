@@ -22,7 +22,7 @@
                         </li>
                         <li>
                             <asp:Label runat="server" AssociatedControlID="Password">Password</asp:Label>
-                            <asp:TextBox runat="server" ID="Password" TextMode="Password" />
+                            <asp:TextBox runat="server" ID="Password" TextMode="Password"/>
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" CssClass="field-validation-error" ErrorMessage="The password field is required." />
                         </li>
                         <li>
@@ -30,7 +30,7 @@
                             <asp:Label runat="server" AssociatedControlID="RememberMe" CssClass="checkbox">Remember me?</asp:Label>
                         </li>
                     </ol>
-                    <asp:Button runat="server" CommandName="Login" Text="Log in" />
+                    <asp:Button runat="server" CommandName="Login" Text="Log in" OnClick="Login_Click" />
                 </fieldset>
             </LayoutTemplate>
         </asp:Login>

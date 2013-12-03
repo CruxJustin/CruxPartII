@@ -4,11 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using LotBanking2.Crux;
 
 namespace LotBankingCrux_v_1.Account
 {
+
+
     public partial class Login : Page
     {
+        CruxDB dbObject = new CruxDB();
+        //setup Sql Query string
+        string sSql = "";
+
         protected void Page_Load(object sender, EventArgs e)
         {
             RegisterHyperLink.NavigateUrl = "Register";
@@ -19,6 +26,18 @@ namespace LotBankingCrux_v_1.Account
             {
                 RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
             }
+        }
+
+        protected void Login_Click(object sender, EventArgs e)
+        {
+            /*Needs to be fixed
+              if(dbObject.login(login from textbox, password from textbox) == -2)
+            {
+                Response.Redirect("Default.aspx");
+            }
+             * */
+
+            Response.Redirect("../CBHHome.aspx");
         }
     }
 }

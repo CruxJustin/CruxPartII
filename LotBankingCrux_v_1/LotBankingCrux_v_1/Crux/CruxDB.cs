@@ -52,6 +52,7 @@ namespace LotBanking2.Crux
 
         public int setPassword(int id, String password)
         {
+            
             MySqlCommand updateLogin = new MySqlCommand("UPDATE Login " +
                                                        "SET password      = @password, " +
                                                           " last_modified = NOW() " +

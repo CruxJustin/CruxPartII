@@ -45,7 +45,7 @@
             <div class="content-wrapper">
                 <div class="float-left">
                     <p class="site-title">
-                        <a runat="server" href="~/">Crescent Bay Holdings</a>
+                        <a runat="server" href="~/CBHHome.aspx">Crescent Bay Holdings</a>
                     </p>
                 </div>
             </div>
@@ -59,7 +59,7 @@
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                    <p>Crescent Bay Holdings, LLC / T 480.406.6000 / CRUX@notValidEmail.com / © All Rights Reserved</p>
                 </div>
             </div>
         </footer>

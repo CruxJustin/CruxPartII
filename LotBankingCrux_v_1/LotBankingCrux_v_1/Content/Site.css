@@ -10,6 +10,7 @@ html {
 
 a:hover {
     background-color: #c7d1d6;
+    
 }
 
 header {
@@ -82,6 +83,10 @@ li:hover {
             color: white;
             cursor: pointer;
         }
+
+a {
+    color: inherit; 
+}
 /* column container */
 .colmask {
     position: relative; /* This fixes the IE7 overflow hidden bug */
