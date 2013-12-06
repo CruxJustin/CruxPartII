@@ -12,7 +12,8 @@ namespace LotBanking2.Crux
     {
         //Database connection constants
         private string server = "SERVER="+"localhost"+";";
-        private string database = "DATABASE="+"CBH"+";";
+        private string database = "DATABASE=" + "CruxDB" + ";";
+       // private string database = "DATABASE="+"CBH"+";";
         private string user = "UID="+""+";";
         private string password = "PASSWORD="+""+";";
 
