@@ -53,6 +53,7 @@ namespace LotBanking2.Crux
 
         public int setPassword(int id, String password)
         {
+            
             MySqlCommand updateLogin = new MySqlCommand("UPDATE Login " +
                                                        "SET password      = @password, " +
                                                           " last_modified = NOW() " +
@@ -381,7 +382,7 @@ namespace LotBanking2.Crux
 
             return doc;
         }
-
+        // Need number of lots as parameter, remove estimated sale value. Add estimated lot takedown schedule as optional parameter
         public int insertPoject(int builder_id, String project_name, float latitude, float longitude, Decimal aquisition_price, Decimal improvement_cost, Decimal estimated_sale_value)
         {
             MySqlCommand insertNewProject = new MySqlCommand("INSERT INTO Project" +

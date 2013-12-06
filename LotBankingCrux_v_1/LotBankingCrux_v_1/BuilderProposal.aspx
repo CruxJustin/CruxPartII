@@ -85,17 +85,6 @@
             margin: 0 auto;
         }
     </style>
-    <div class="menubar">
-        <div class="table">
-            <ul id="horizontal-list">
-                <li>DOCUMENTATION</li>
-                <li>PERFORMANCE METRICS</li>
-                <li>SALES REPORT</li>
-                <li>TRAFFIC REPORT</li>
-                <li>LOCATION</li>
-            </ul>
-        </div>
-
 
     </div>
     <input id="Hidden2" type="hidden" />
