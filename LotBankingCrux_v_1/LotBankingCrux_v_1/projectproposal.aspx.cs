@@ -13,5 +13,10 @@ namespace LotBankingCrux_v_1
         {
 
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/CBHHome.aspx");
+        }
     }
 }

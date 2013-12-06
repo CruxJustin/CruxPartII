@@ -15,7 +15,7 @@ namespace LotBankingCrux_v_1
         }
         protected void NewBuilderProposal_OnClick(object sender, EventArgs e)
         {
-            Response.Redirect("/BuilderProposal.aspx");
+            Response.Redirect("/ProjectProposal.aspx");
         }
 
         protected void ProjectDashboard_OnClick(object sender, EventArgs e)
