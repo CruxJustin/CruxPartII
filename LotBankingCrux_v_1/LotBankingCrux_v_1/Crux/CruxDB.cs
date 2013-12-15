@@ -383,19 +383,21 @@ namespace LotBanking2.Crux
             return doc;
         }
         // Need number of lots as parameter, remove estimated sale value. Add estimated lot takedown schedule as optional parameter
-        public int insertPoject(int builder_id, String project_name, float latitude, float longitude, Decimal aquisition_price, Decimal improvement_cost, Decimal estimated_sale_value)
+        public int insertPoject(int builder_id, String project_name, String first_crossroad, String second_crossroad, String cardinal, String location_notes, Decimal aquisition_price, Decimal improvement_cost, int total_lot_count)
         {
             MySqlCommand insertNewProject = new MySqlCommand("INSERT INTO Project" +
-                                                                   "( builder_id, project_name, latitude,   longitude, aquisition_price, improvement_cost, estimated_sale_value)" +
-                                                             "VALUES( @builderId, @projectName, @latitude, @longitude, @aquisitionPrice, @improvementCost, @estimatedSaleValue )",
+                                                                   "( builder_id, project_name, first_crossroad, second_crossroad, cardinal,  location_notes, aquisition_price, improvement_cost, total_lot_count)" +
+                                                             "VALUES( @builderId, @projectName, @firstCrossroad, @secondCrossroad, @cardinal, @locationNotes, @aquisitionPrice, @improvementCost, @totalLotCount)",
                                                              databaseConnection);
             insertNewProject.Parameters.Add("@builderId", MySqlDbType.Int32).Value = builder_id;
             insertNewProject.Parameters.Add("@projectName", MySqlDbType.Int32).Value = project_name;
-            insertNewProject.Parameters.Add("@latitude", MySqlDbType.Float).Value = latitude;
-            insertNewProject.Parameters.Add("@longitude", MySqlDbType.Float).Value = longitude;
+            insertNewProject.Parameters.Add("@firstCrossroad", MySqlDbType.VarChar, 30).Value = first_crossroad;
+            insertNewProject.Parameters.Add("@secondCrossroad", MySqlDbType.VarChar, 30).Value = second_crossroad;
+            insertNewProject.Parameters.Add("@cardinal", MySqlDbType.VarChar, 2).Value = cardinal;
+            insertNewProject.Parameters.Add("@locationNotes", MySqlDbType.VarChar, 248).Value = location_notes;
             insertNewProject.Parameters.Add("@aqusitoinPrice", MySqlDbType.Decimal).Value = aquisition_price;
             insertNewProject.Parameters.Add("@improvementCost", MySqlDbType.Decimal).Value = improvement_cost;
-            insertNewProject.Parameters.Add("@estimatedSaleValue", MySqlDbType.Decimal).Value = estimated_sale_value;
+            insertNewProject.Parameters.Add("@totalLotCount", MySqlDbType.Int32).Value = total_lot_count;
 
             databaseConnection.Open();
 
@@ -416,7 +418,7 @@ namespace LotBanking2.Crux
         public Project[] getProjects(int builder_id)
         {
 
-            MySqlCommand selectBuilderProjects = new MySqlCommand("SELECT id, project_name, latitude, longitude, aquisition_price, improvement_cost, estimated_sale_value, last_modified" +
+            MySqlCommand selectBuilderProjects = new MySqlCommand("SELECT id, project_name, first_cross_street, second_cross_street, cardinal, location_notes, aquisition_price, improvement_cost, total_lot_count, last_modified" +
                                                                  "FROM Projects " +
                                                                 "WHERE buider_id = @builderId",
                                                                 databaseConnection);
@@ -435,14 +437,16 @@ namespace LotBanking2.Crux
                 {
                     int i = reader.GetInt32(0);
                     String pn = reader.GetString(1);
-                    float lat = reader.GetFloat(2);
-                    float lon = reader.GetFloat(3);
-                    Decimal aq = reader.GetDecimal(4);
-                    Decimal ic = reader.GetDecimal(5);
-                    Decimal esv = reader.GetDecimal(6);
-                    DateTime lm = reader.GetDateTime(7);
+                    String fcs = reader.GetString(2);
+                    String scs = reader.GetString(3);
+                    String c = reader.GetString(4);
+                    String ln = reader.GetString(5);
+                    Decimal aq = reader.GetDecimal(6);
+                    Decimal ic = reader.GetDecimal(7);
+                    int tlc = reader.GetInt32(8);
+                    DateTime lm = reader.GetDateTime(9);
                     projectCount++;
-                    Project newProject = new Project(i, builder_id, pn, lat, lon, aq, ic, esv, lm);
+                    Project newProject = new Project(i, builder_id, pn, fcs, scs, c, ln, aq, ic, tlc, lm);
                     projectList.Add(newProject);
                 }
                 projects = new Project[projectCount];
@@ -844,23 +848,26 @@ namespace LotBanking2.Crux
         private int id;
         private int builderId;
         private String projectName;
-        private float latitude;
-        private float longitude;
+        private String firstCrossStreet;
+        private String secondCrossStreet;
+        private String cardinal;
+        private String location_notes;
         private Decimal aquisitionPrice;
         private Decimal improvementCost;
-        private Decimal estimatedSaleValue;
+        private int totalLotCount;
         private DateTime lastModified;
 
-        public Project(int i, int bid, String pn, float lat, float lon, Decimal aq, Decimal ic, Decimal esv, DateTime lm)
+        public Project(int i, int bid, String pn, String fcs, String scs, String card, String ln, Decimal aq, Decimal ic, int tlc, DateTime lm)
         {
             id = i;
             builderId = bid;
             projectName = pn;
-            latitude = lat;
-            longitude = lon;
-            aquisitionPrice = aq;
+            firstCrossStreet = fcs;
+            secondCrossStreet = scs;
+            cardinal = card;
+            location_notes = ln;
             improvementCost = ic;
-            estimatedSaleValue = esv;
+            totalLotCount = tlc;
             lastModified = lm;
         }
 
@@ -881,7 +888,7 @@ namespace LotBanking2.Crux
 
         public Coordinates getCoordinates()
         {
-            return new Coordinates(latitude, longitude);
+            return new Coordinates(firstCrossStreet, secondCrossStreet, cardinal, location_notes);
         }
 
         public Decimal getAquisitionPrice()
@@ -907,12 +914,16 @@ namespace LotBanking2.Crux
 
     public class Coordinates
     {
-        public float latitude;
-        public float longitude;
-        public Coordinates(float lat, float lon)
+        public String firstCrossStreet;
+        public String secondCrossStreet;
+        public String cardinal;
+        public String location_notes;
+        public Coordinates(String fcs, String scs, String c, String ln)
         {
-            latitude = lat;
-            longitude = lon;
+            firstCrossStreet = fcs;
+            secondCrossStreet = scs;
+            cardinal = c;
+            location_notes = ln;
         }
     }
 
