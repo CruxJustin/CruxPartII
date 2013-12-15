@@ -13,6 +13,10 @@ namespace LotBankingCrux_v_1
         {
 
         }
+        protected void DueDiligence_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("/DueDiligence.aspx");
+        }
         protected void NewBuilderProposal_OnClick(object sender, EventArgs e)
         {
             Response.Redirect("/ProjectProposal.aspx");
