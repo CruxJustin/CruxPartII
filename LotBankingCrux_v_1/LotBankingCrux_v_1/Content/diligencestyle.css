@@ -1,0 +1,115 @@
+﻿html {
+    background-color: #FFFFFF;
+}
+
+body {
+    margin: 50px 0px 0px 100px;
+    font-family: Eyeglass, Arial;
+}
+
+ol {
+    margin: 0 auto;
+}
+
+li {
+    padding: 10px;
+}
+
+td {
+    vertical-align: 0;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-bottom: 3px;
+}
+
+a {
+    display: block;
+    box-sizing: border-box;
+    width: 150px;
+}
+
+a:-webkit-any-link {
+    color: #000080;
+    text-decoration: none;
+    cursor: auto;
+}
+
+.wizardText {
+    color: #000080;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: #E3E3E3;
+  width: 600px;
+  opacity: 1;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px #000080;
+  -webkit-box-shadow: 0px 0px 5px 0px #000080;
+  -moz-box-shadow: 0px 0px 5px 0px #000080;
+  -ms-box-shadow: 0px 0px 5px 0px #000080;
+  -o-box-shadow: 0px 0px 5px 0px #000080;
+}
+
+.uploadButton {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: #000080;
+  width: 110px;
+  height: 35px;
+  opacity: 1;
+  border: 1px solid #075399;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  margin-right: 50px;
+  line-height: 0px;
+  box-shadow: 0px 0px 5px 0px #000000;
+  -webkit-box-shadow: 0px 0px 5px 0px #000000;
+  -moz-box-shadow: 0px 0px 5px 0px #000000;
+  -ms-box-shadow: 0px 0px 5px 0px #000000;
+  -o-box-shadow: 0px 0px 5px 0px #000000;
+  display: block;
+}
+
+.nextButton {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: #000080;
+  width: 110px;
+  height: 35px;
+  opacity: 1;
+  border: 1px solid #075399;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  margin-right: 50px;
+  line-height: 0px;
+  box-shadow: 0px 0px 5px 0px #000000;
+  -webkit-box-shadow: 0px 0px 5px 0px #000000;
+  -moz-box-shadow: 0px 0px 5px 0px #000000;
+  -ms-box-shadow: 0px 0px 5px 0px #000000;
+  -o-box-shadow: 0px 0px 5px 0px #000000;
+  display: block;
+}
+
+#Wizard_StartNavigationTemplateContainerID_StartNextButton {
+    padding-left: 10px;
+}
