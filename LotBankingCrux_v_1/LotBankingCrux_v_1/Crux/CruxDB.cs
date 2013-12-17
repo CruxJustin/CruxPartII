@@ -10,12 +10,13 @@ namespace LotBanking2.Crux
 {
     public class CruxDB
     {
+        //these will changed depending on your local db setup
         //Database connection constants
         private string server = "SERVER="+"localhost"+";";
-        private string database = "DATABASE=" + "CruxDB" + ";";
+        private string database = "DATABASE=" + "crux_db" + ";";
        // private string database = "DATABASE="+"CBH"+";";
-        private string user = "UID="+""+";";
-        private string password = "PASSWORD="+""+";";
+        private string user = "UID="+"root"+";";
+        private string password = "PASSWORD="+"Crux"+";";
 
         private MySqlConnection databaseConnection;
         
