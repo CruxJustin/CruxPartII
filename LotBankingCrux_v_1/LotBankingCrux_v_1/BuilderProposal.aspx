@@ -86,7 +86,7 @@
         }
     </style>
 
-    </div>
+  
     <input id="Hidden2" type="hidden" />
     <input id="Hidden1" type="hidden" />
     <asp:Panel ID="Panel1" runat="server" CssClass="panel-background">

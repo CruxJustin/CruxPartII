@@ -6,7 +6,7 @@
 <head runat="server">
     <link rel="stylesheet" type="text/css" href="Content/diligencestyle.css" />
 
-    <title></title>
+    <title>Due Diligence</title>
 </head>
 <body>
     <form id="form1" runat="server">
