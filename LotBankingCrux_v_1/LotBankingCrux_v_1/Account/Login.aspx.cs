@@ -36,6 +36,13 @@ namespace LotBankingCrux_v_1.Account
                 Response.Redirect("Default.aspx");
             }
              * */
+            string userName = ((TextBox)LoginForm.FindControl("UserName")).Text;
+
+            string passWord = ((TextBox)LoginForm.FindControl("Password")).Text;
+
+            CruxDB DBObject = new CruxDB();
+
+            DBObject.login(userName, passWord);
 
             Response.Redirect("../CBHHome.aspx");
         }
