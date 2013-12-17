@@ -198,7 +198,6 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\projprop.css" />
-    <Content Include="DueDiligence.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\Sprites\builderLogo.png" />
     <Content Include="Images\bullet.png" />
@@ -336,20 +335,12 @@
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Crux\CruxDB.cs" />
-    <Compile Include="Crux\MachineMemory.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DueDiligence.aspx.cs">
-      <DependentUpon>DueDiligence.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DueDiligence.aspx.designer.cs">
-      <DependentUpon>DueDiligence.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
