@@ -382,7 +382,7 @@ namespace LotBanking2.Crux
 
             return doc;
         }
-        // Need number of lots as parameter, remove estimated sale value. Add estimated lot takedown schedule as optional parameter
+        
         public int insertPoject(int builder_id, String project_name, String first_crossroad, String second_crossroad, String cardinal, String location_notes, Decimal aquisition_price, Decimal improvement_cost, int total_lot_count)
         {
             MySqlCommand insertNewProject = new MySqlCommand("INSERT INTO Project" +
@@ -901,9 +901,9 @@ namespace LotBanking2.Crux
             return improvementCost;
         }
 
-        public Decimal getEstimatedSaleValue()
+        public int getLotCount()
         {
-            return estimatedSaleValue;
+            return totalLotCount;
         }
 
         public DateTime getLastModified()
