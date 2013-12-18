@@ -142,6 +142,7 @@
     <Content Include="CBHHome.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bargraph.css" />
+    <Content Include="Content\diligencestyle.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -197,8 +198,11 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
-    <Content Include="Content\themes\projprop.css" />
+    <Content Include="Content\projprop.css" />
+    <Content Include="DueDiligence.aspx" />
     <Content Include="Images\accent.png" />
+    <Content Include="Images\CBH_blacklogo.png" />
+    <Content Include="Images\CBH_whitelogo.png" />
     <Content Include="Images\Sprites\builderLogo.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\delete_salesTraffic.png" />
@@ -341,6 +345,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DueDiligence.aspx.cs">
+      <DependentUpon>DueDiligence.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DueDiligence.aspx.designer.cs">
+      <DependentUpon>DueDiligence.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
