@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.IO;
 using MySql.Data.MySqlClient;
+using System.Diagnostics;
 
 namespace LotBanking2.Crux
 {
@@ -12,10 +13,12 @@ namespace LotBanking2.Crux
     {
         //Database connection constants
         private string server = "SERVER="+"localhost"+";";
-        private string database = "DATABASE=" + "CruxDB" + ";";
+        private string database = "DATABASE=" + "crux_db" + ";";
        // private string database = "DATABASE="+"CBH"+";";
-        private string user = "UID="+""+";";
-        private string password = "PASSWORD="+""+";";
+        private string user = "UID="+"root"+";";
+        private string password = "PASSWORD="+"Crux"+";";
+
+        public static int dbID = 0;
 
         private MySqlConnection databaseConnection;
         
@@ -80,23 +83,26 @@ namespace LotBanking2.Crux
         public int login(String login, String password)
         {
             
-            
-            
+        
             MySqlCommand getLoginData = new MySqlCommand("SELECT id " +
                                                        "FROM Login " +
-                                                      "WHERE login = '@login'," +
-                                                        "AND password = '@password'", databaseConnection);
+                                                      "WHERE login = @login" + Environment.NewLine +
+                                                        "AND password = @password", databaseConnection);
+
             getLoginData.Parameters.Add("@login", MySqlDbType.VarChar, 30).Value = login;
             getLoginData.Parameters.Add("@password", MySqlDbType.VarChar, 30).Value = password;
+
+            Debug.WriteLine(getLoginData.CommandText.ToString());
+
             databaseConnection.Open();
-            int id = -1;
+            dbID = -1;
             MySqlDataReader reader;
             try
             {
                 reader = getLoginData.ExecuteReader(CommandBehavior.SequentialAccess);
                 while(reader.Read())
                 {
-                    id = reader.GetInt32(0);
+                    dbID = reader.GetInt32(0);
                 }
             }
             catch (Exception e)
@@ -105,9 +111,9 @@ namespace LotBanking2.Crux
             }
             reader.Close();
             databaseConnection.Close();
-            if (id >= 0)
+            if (dbID >= 0)
             {
-                return id;
+                return dbID;
             }
             return -2;
         }
@@ -385,17 +391,17 @@ namespace LotBanking2.Crux
         
         public int insertPoject(int builder_id, String project_name, String first_crossroad, String second_crossroad, String cardinal, String location_notes, Decimal aquisition_price, Decimal improvement_cost, int total_lot_count)
         {
-            MySqlCommand insertNewProject = new MySqlCommand("INSERT INTO Project" +
+            MySqlCommand insertNewProject = new MySqlCommand("INSERT INTO Projects" +
                                                                    "( builder_id, project_name, first_crossroad, second_crossroad, cardinal,  location_notes, aquisition_price, improvement_cost, total_lot_count)" +
                                                              "VALUES( @builderId, @projectName, @firstCrossroad, @secondCrossroad, @cardinal, @locationNotes, @aquisitionPrice, @improvementCost, @totalLotCount)",
                                                              databaseConnection);
             insertNewProject.Parameters.Add("@builderId", MySqlDbType.Int32).Value = builder_id;
-            insertNewProject.Parameters.Add("@projectName", MySqlDbType.Int32).Value = project_name;
+            insertNewProject.Parameters.Add("@projectName", MySqlDbType.VarChar).Value = project_name;
             insertNewProject.Parameters.Add("@firstCrossroad", MySqlDbType.VarChar, 30).Value = first_crossroad;
             insertNewProject.Parameters.Add("@secondCrossroad", MySqlDbType.VarChar, 30).Value = second_crossroad;
             insertNewProject.Parameters.Add("@cardinal", MySqlDbType.VarChar, 2).Value = cardinal;
             insertNewProject.Parameters.Add("@locationNotes", MySqlDbType.VarChar, 248).Value = location_notes;
-            insertNewProject.Parameters.Add("@aqusitoinPrice", MySqlDbType.Decimal).Value = aquisition_price;
+            insertNewProject.Parameters.Add("@aquisitionPrice", MySqlDbType.Decimal).Value = aquisition_price;
             insertNewProject.Parameters.Add("@improvementCost", MySqlDbType.Decimal).Value = improvement_cost;
             insertNewProject.Parameters.Add("@totalLotCount", MySqlDbType.Int32).Value = total_lot_count;
 

@@ -36,10 +36,11 @@
                     </h4>
                 </li>
                 <li class="location">
-                    <h4 id="long">Longitude<asp:TextBox class="user-info" ID="TextBox2" runat="server"></asp:TextBox>
+                    <h4 id="long">First Street<asp:TextBox class="user-info" ID="FirstStreet" runat="server"></asp:TextBox>
                     </h4>
-                    <h4 id="lat">Latitude<asp:TextBox class="user-info" ID="TextBox3" runat="server"></asp:TextBox>
+                    <h4 id="lat">&nbsp; Second Street<asp:TextBox class="user-info" ID="SecondStreet" runat="server"></asp:TextBox>
                     </h4>
+                    Cardinal<asp:TextBox class="user-info" ID="Cardinal" runat="server"></asp:TextBox>
                 </li>
                 <li class="num-lots">
                     <h4>Number of Lots<asp:DropDownList class="user-info" ID="DropDownList1" runat="server">
@@ -76,11 +77,13 @@
                         </div>
                     </div>
                 </li>
-
+               <asp:Label ID="DataInserted" runat="server" AssociatedControlID="DataInserted" ForeColor="Green" Visible="False">Data Inserted</asp:Label>
 
                 <li class="cancelcreate-parent">
-                    <asp:Button class="create" ID="Button1" runat="server" Text="Create Project" />
+                     
+                    <asp:Button class="create" ID="Button1" runat="server" Text="Create Project" OnClick="Button1_Click" />
                     <asp:Button class="cancel" ID="Button2" runat="server" Text="Cancel" OnClick="Button2_Click" />
+                    
                     <!--
                         <div class="create">
                             <h4>Create Project</h4>

@@ -30,7 +30,7 @@ li {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   background-color: #E3E3E3;
-  width: 600px;
+  width: 681px;
   opacity: 1;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -42,6 +42,7 @@ li {
   -moz-box-shadow: 0px 0px 5px 0px #000000;
   -ms-box-shadow: 0px 0px 5px 0px #000000;
   -o-box-shadow: 0px 0px 5px 0px #000000;
+    margin-left: 0px;
 }
 
 .create-a-project {
@@ -80,7 +81,7 @@ li {
   -moz-box-sizing: border-box;
   background-color: #ffffff;
   width: 600px;
-  height: 50px;
+  height: 100px;
   opacity: 1;
   color: #666666;
   font-weight: bold;
@@ -90,13 +91,15 @@ li {
     #long {
         display: block;
         float: left;
-    }
+    width: 272px;
+}
 
     #lat {
         display: block;
         float: right;
         margin-right: 50px;
-    }
+    width: 316px;
+}
 .num-lots {
   box-sizing: border-box;
   -moz-box-sizing: border-box;

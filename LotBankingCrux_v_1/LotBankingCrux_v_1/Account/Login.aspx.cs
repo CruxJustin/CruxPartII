@@ -40,11 +40,16 @@ namespace LotBankingCrux_v_1.Account
 
             string passWord = ((TextBox)LoginForm.FindControl("Password")).Text;
 
-            CruxDB DBObject = new CruxDB();
 
-            DBObject.login(userName, passWord);
 
-            Response.Redirect("../CBHHome.aspx");
+            if (dbObject.login(userName, passWord) > 0)
+            {
+                Response.Redirect("../CBHHome.aspx");
+            }
+            else
+            {
+                LoginForm.FindControl("LoginErrorLabel").Visible = true;
+            }
         }
     }
 }

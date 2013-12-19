@@ -31,13 +31,15 @@
                         </li>
                     </ol>
                     <asp:Button runat="server" CommandName="Login" Text="Log in" OnClick="Login_Click" />
+                     <asp:Label ID="LoginErrorLabel" runat="server" AssociatedControlID="LoginErrorLabel" ForeColor="Red" Visible="False">Please verify your credintials and try to login again</asp:Label>
+            <br />
                 </fieldset>
             </LayoutTemplate>
+           
         </asp:Login>
-        <p>
+         
             <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled">Register</asp:HyperLink>
-            if you don't have an account.
-        </p>
+            &nbsp;if you don't have an account.
     </section>
 
     <section id="socialLoginForm">
