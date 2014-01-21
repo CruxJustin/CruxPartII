@@ -14,11 +14,21 @@ a:hover {
 }
 
 header {
-    height: 50px;
-    padding: 0 15% 0 15%;
+    height: 36px;
+    padding: 0 0 0 2%;
     background-color: black;
+    vertical-align:middle;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px
 }
 
+float-left {
+    float:left;
+    font-size: 20px;
+
+}
 /* Header styles */
 h1, h2, h3,
 h4, h5, h6 {
@@ -52,6 +62,23 @@ h5, h6 {
         text-decoration: none;
     }
 
+    /* site title
+----------------------------------------------------------*/
+.site-title {
+    font-size: 34px;
+    display: inline;
+    color: white;
+    font-family: Eyeglass;
+    vertical-align:middle;
+}
+
+    .site-title a, .site-title a:hover, .site-title a:active {
+        
+        color: white;
+        outline: none;
+        text-decoration: none;
+    }
+
 /* main layout
 ----------------------------------------------------------*/
 
@@ -62,6 +89,32 @@ h5, h6 {
  
 }
 
+/* menu
+----------------------------------------------------------*/
+ul#menu {
+    font-size: 2.3em;
+    font-weight: 600;
+    margin: 0 35px 20px 0;
+    padding: 0;
+    text-align: left;
+}
+
+    ul#menu li {
+        list-style: none;
+        padding-left: 15px;
+        display: inline;
+    }
+
+        ul#menu li a {
+            background: none;
+            color: white;
+            text-decoration: none;
+        }
+
+            ul#menu li a:hover {
+                color: #999;
+                text-decoration: none;
+            }
 .table {
     display: table;
     margin: -0px auto -10px auto;
@@ -87,38 +140,15 @@ li:hover {
 a {
     color: inherit; 
 }
-/* column container */
-.colmask {
-    position: relative; /* This fixes the IE7 overflow hidden bug */
-    clear: both;
-    float: left;
-    width: 100%; /* width of whole page */
-    overflow: hidden; /* This chops off any overhanging divs */
-}
-/* common column settings */
-.colright,
-.colmid,
-.colleft {
-    float: left;
-    width: 100%; /* width of page */
-    position: relative;
-}
 
-.col1,
-.col2,
-.col3 {
-    float: left;
-    position: relative;
-    overflow: hidden;
-}
+
  .panel-parent {
-            display: block;
-            border: thin outset #C0C0C0;
-            background-color: #D8D8D8;
-            margin: 0 auto;
-            height: 830px;
-            width: 82%;
-        }
+    display: block;
+    border: thin outset #C0C0C0;
+    background-color: #D8D8D8;
+    margin: 0 auto;
+    width: 82%;
+}
 
         .panel-background {
             background-image: url('/Images/texture.png');
@@ -137,33 +167,7 @@ a {
             width: 80%;
         }
 
-/* 3 Column settings /
-.threecol {
-    background: url('../Images/pw_pattern.png'); /* column's background colour /
-}
 
-    .threecol .colmid {
-        right: 15%; /* width of the right column /
-    }
-
-    .threecol .colleft {
-        right: 70%; /* width of the middle column/
-    }
-
-    .threecol .col1 {
-        width: 64%; /* width of center column content (column width minus padding on either side) /
-        left: 105%; /* 100% plus left padding of center column /
-        background: #CCCCCC;
-    }
-
-        /*only works because of the current size of the objects. Value should change upon correct implementation/
-        .threecol .col1 .position {
-            margin-left: 5%;
-            margin-right: 5%;
-            height: 800px;
-            padding-bottom: 10px;
-        }
-        */
 .graphcontainer {
     background-color: white;
     height: 42%;
@@ -209,52 +213,12 @@ a {
     float: right;
 }
 
-.threecol .col2 {
-    width: 13%; /* Width of left column content (column width minus padding on either side) */
-    left: 26%; /* width of (right column) plus (center column left and right padding) plus (left column left padding) */
-}
-
-
-    .threecol .col2 .position {
-        position: relative;
-        margin-left: 20%;
-    }
-
-.threecol .col3 {
-    width: 11%; /* Width of right column content (column width minus padding on either side) */
-    left: 95%; /* Please make note of the brackets here:
-					(100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
-}
-
-    .threecol .col3 .position {
-        margin-left: 20%;
-    }
-
-
-
-
 footer {
     background-color: #e2e2e2;
 }
 
 
-/* site title
-----------------------------------------------------------*/
-.site-title {
-    font-size: 2em;
-    margin: 0;
-    width: 50%;
-    height: 250px;
-    display: inline;
-    color:white;
-  
-}
 
-    .site-title a, .site-title a:hover, .site-title a:active {
-        color: white;
-        outline: none;
-        text-decoration: none;
-    }
 
 
 /* login
@@ -292,29 +256,4 @@ footer {
 
 
 
-/* menu
-----------------------------------------------------------*/
-ul#menu {
-    font-size: 2.3em;
-    font-weight: 600;
-    margin: 0 35px 20px 0;
-    padding: 0;
-    text-align: left;
-}
 
-    ul#menu li {
-        list-style: none;
-        padding-left: 15px;
-        display: inline;
-    }
-
-        ul#menu li a {
-            background: none;
-            color: white;
-            text-decoration: none;
-        }
-
-            ul#menu li a:hover {
-                color: #999;
-                text-decoration: none;
-            }

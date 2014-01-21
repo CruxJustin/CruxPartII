@@ -11,7 +11,7 @@ namespace LotBankingCrux_v_1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            MyIFrame.Attributes["src"] = "http://www.crescentbayholdings.com/";
         }
         protected void DueDiligence_OnClick(object sender, EventArgs e)
         {

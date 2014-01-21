@@ -11,23 +11,33 @@
     </asp:PlaceHolder>
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width" />
+
 
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+
     <asp:ContentPlaceHolder runat="server" ID="Stylesheets">
-        <link rel="stylesheet" href="../Content/Site.css" type="text/css" />
-    </asp:ContentPlaceHolder>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+        <link href="Content/Site.css" rel="stylesheet" type="text/css" />
+        <link href="Content/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+        <link href="Content/themes/base/jquery.ui.accordion.css" rel="stylesheet" type="text/css" /></asp:ContentPlaceHolder>
+
 </head>
 <body>
     <form runat="server">
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script>
+            $(function () {
+                $("#accordion").accordion();
+            });
+        </script>
         <asp:ScriptManager runat="server">
-            <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=272931&clcid=0x409 --%>
-                <%--Framework Scripts--%>
 
+            <Scripts>
                 <asp:ScriptReference Name="MsAjaxBundle" />
-                <asp:ScriptReference Name="jquery" />
-                <asp:ScriptReference Name="jquery.ui.combined" />
+                <asp:ScriptReference Path="~/Scripts/jquery-1.6.4-vsdoc.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery-1.6.4.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery-1.6.4.min.js" />
                 <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
                 <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
                 <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
@@ -37,32 +47,39 @@
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site Scripts--%>
+
             </Scripts>
         </asp:ScriptManager>
 
         <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">
-                        <a runat="server" href="~/CBHHome.aspx">Crescent Bay Holdings</a>
-                    </p>
-                </div>
+            <div class="site-title">
+                <img src="Images/Logo.png" />
+                <a runat="server" height="120px" href="~/CBHHome.aspx">Crescent Bay Holdings</a>
             </div>
         </header>
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
         <div id="body">
-            <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
-            <section class="content-wrapper main-content clear-fix">
-                <asp:ContentPlaceHolder runat="server" ID="MainContent" />
-            </section>
+            <asp:Panel ID="Panel1" runat="server" CssClass="panel-background">
+                <asp:Panel ID="Panel2" runat="server" CssClass="panel-parent">
+
+
+                    <asp:ContentPlaceHolder runat="server" ID="MainContent">
+
+                    </asp:ContentPlaceHolder>
+
+
+                </asp:Panel>
+            </asp:Panel>
         </div>
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>Crescent Bay Holdings, LLC / T 480.406.6000 / CRUX@notValidEmail.com / © All Rights Reserved</p>
+                    <p>Crescent Bay Holdings, LLC / T 480.406.6000 / CRUX@notValidEmail.com / © All Rights Reservedserved</p>
                 </div>
             </div>
         </footer>
     </form>
+
+
 </body>
 </html>

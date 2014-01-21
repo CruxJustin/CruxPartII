@@ -11,7 +11,7 @@ namespace LotBankingCrux_v_1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Redirect("/Account/Login.aspx");
+            Response.Redirect("Login.aspx");
         }
 
     }
