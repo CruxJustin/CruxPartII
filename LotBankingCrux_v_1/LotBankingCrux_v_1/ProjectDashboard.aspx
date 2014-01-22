@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="Project Dashboard" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProjectDashboard.aspx.cs" Inherits="LotBankingCrux_v_1.ProjectDashboard" %>
 
+<%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
+
 
 <asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="FeaturedContent">
     <div class="menubar">
@@ -100,8 +102,31 @@
     </asp:Panel>
     <asp:Panel ID="Panel4" runat="server" CssClass="panel-style" Height="300px">
         <div class="tscontainer">
-            <img src="http://localhost:4838/Images/delete_salesTraffic.png" height="100%" width="100%" />
-        </div>
+            <asp:Chart ID="passtimeChart" runat="server" Width="292px">
+                <Series>
+                    <asp:Series ChartArea="ChartArea1" ChartType="Pie" Name="Series1">
+                        <Points>
+                            <asp:DataPoint AxisLabel="Programming the Web" YValues="42" />
+                            <asp:DataPoint AxisLabel="Building Robots" YValues="18" />
+                            <asp:DataPoint AxisLabel="Playing Video Games" YValues="17" />
+                            <asp:DataPoint AxisLabel="Playing Foosball" YValues="5" />
+                        </Points>
+                    </asp:Series>
+                </Series>
+                <ChartAreas>
+                    <asp:ChartArea Name="ChartArea1">
+                    </asp:ChartArea>
+                </ChartAreas>
+            </asp:Chart>
+       <%--     <asp:Chart ID="Chart1" runat="server" Width="339px">
+                <Series>
+                    <asp:Series Name="Series1"></asp:Series>
+                </Series>
+                <ChartAreas>
+                    <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
+                </ChartAreas>
+            </asp:Chart>
+        </div>--%>
         <div class="mapcontainer">
             <!-- Map display -->
             <div id="map-canvas"></div>

@@ -201,6 +201,8 @@ a {
     margin-right: 2%;
     display: inline-block;
     float: left;
+    top: 0px;
+    left: 0px;
 }
 
 .mapcontainer {
