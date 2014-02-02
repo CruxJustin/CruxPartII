@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace LotBankingCrux_v_1
 {
-    public partial class BuilderProposal : System.Web.UI.Page
+    public partial class Investor : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

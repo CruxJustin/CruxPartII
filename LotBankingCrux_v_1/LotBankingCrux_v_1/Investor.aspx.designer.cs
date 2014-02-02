@@ -7,29 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LotBankingCrux_v_1.Account
-{
-
-
-    public partial class Register
-    {
-
+namespace LotBankingCrux_v_1 {
+    
+    
+    public partial class Investor {
+        
         /// <summary>
-        /// RegisterUser control.
+        /// BuilderProposal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CreateUserWizard RegisterUser;
-
-        /// <summary>
-        /// RegisterUserWizardStep control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CreateUserWizardStep RegisterUserWizardStep;
+        protected global::System.Web.UI.WebControls.LinkButton BuilderProposal;
     }
 }

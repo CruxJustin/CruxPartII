@@ -7,33 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LotBankingCrux_v_1.Account
-{
-
-
-    public partial class RegisterExternalLogin
-    {
-
-
-
+namespace LotBankingCrux_v_1 {
+    
+    
+    public partial class CBHDashboard {
+        
         /// <summary>
-        /// userNameForm control.
+        /// Panel3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder userNameForm;
-
+        protected global::System.Web.UI.WebControls.Panel Panel3;
+        
         /// <summary>
-        /// userName control.
+        /// Panel4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox userName;
-
-
+        protected global::System.Web.UI.WebControls.Panel Panel4;
+        
+        /// <summary>
+        /// passtimeChart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.DataVisualization.Charting.Chart passtimeChart;
     }
 }

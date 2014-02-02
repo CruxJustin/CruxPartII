@@ -7,7 +7,7 @@ using System.IO;
 using MySql.Data.MySqlClient;
 using System.Diagnostics;
 
-namespace LotBanking2.Crux
+namespace LotBankingCrux_v_1.Crux
 {
     public class CruxDB
     {

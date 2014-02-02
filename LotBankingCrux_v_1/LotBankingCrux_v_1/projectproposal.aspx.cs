@@ -35,7 +35,7 @@ namespace LotBankingCrux_v_1
         {
             DataInserted.ForeColor = System.Drawing.Color.Green;
             DataInserted.Text = "Data Inserted";
-            LotBanking2.Crux.CruxDB DBObject = new LotBanking2.Crux.CruxDB();
+            LotBankingCrux_v_1.Crux.CruxDB DBObject = new LotBankingCrux_v_1.Crux.CruxDB();
 
             int numberLots = DropDownList1.SelectedIndex;
 
@@ -48,7 +48,7 @@ namespace LotBankingCrux_v_1
             decimal.TryParse(TextBox4.Text, NumberStyles.Currency, NumberFormatInfo.InvariantInfo, out acquisitionPrice);
             decimal.TryParse(TextBox5.Text, NumberStyles.Currency, NumberFormatInfo.InvariantInfo, out improvementCost);
 
-            if (DBObject.insertPoject(LotBanking2.Crux.CruxDB.dbID, TextBox1.Text, FirstStreet.Text, SecondStreet.Text, Cardinal.Text, locationNotes, acquisitionPrice, improvementCost, numberLots) == 1)
+            if (DBObject.insertPoject(LotBankingCrux_v_1.Crux.CruxDB.dbID, TextBox1.Text, FirstStreet.Text, SecondStreet.Text, Cardinal.Text, locationNotes, acquisitionPrice, improvementCost, numberLots) == 1)
             {
                 DataInserted.Visible = true;
                 resetControls();

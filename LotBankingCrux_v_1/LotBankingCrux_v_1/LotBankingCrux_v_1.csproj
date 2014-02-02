@@ -202,6 +202,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Builder.aspx" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -264,12 +265,10 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="Investor.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Manage.aspx" />
     <Content Include="OpenAuthProviders.ascx" />
-    <Content Include="Register.aspx" />
-    <Content Include="RegisterExternalLogin.aspx" />
-    <Content Include="BuilderProposal.aspx" />
     <Content Include="CBHHome.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bargraph.css" />
@@ -305,8 +304,9 @@
     <Content Include="Images\u8_normal.png" />
     <Content Include="packages.config" />
     <Content Include="Content\Fonts\eyeglass-normal.ttf" />
+    <Content Include="CBHDashboard.aspx" />
     <Content Include="ProjectDashboard.aspx" />
-    <Content Include="projectproposal.aspx" />
+    <Content Include="ProjectProposal.aspx" />
     <Content Include="Scripts\bargraph-v1.js" />
     <Content Include="Scripts\boolean_slider.js" />
     <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
@@ -359,6 +359,20 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Builder.aspx.cs">
+      <DependentUpon>Builder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Builder.aspx.designer.cs">
+      <DependentUpon>Builder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Investor.aspx.cs">
+      <DependentUpon>Investor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Investor.aspx.designer.cs">
+      <DependentUpon>Investor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -379,27 +393,6 @@
     </Compile>
     <Compile Include="OpenAuthProviders.ascx.designer.cs">
       <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="RegisterExternalLogin.aspx.cs">
-      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RegisterExternalLogin.aspx.designer.cs">
-      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="BuilderProposal.aspx.cs">
-      <DependentUpon>BuilderProposal.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BuilderProposal.aspx.designer.cs">
-      <DependentUpon>BuilderProposal.aspx</DependentUpon>
     </Compile>
     <Compile Include="CBHHome.aspx.cs">
       <DependentUpon>CBHHome.aspx</DependentUpon>
@@ -433,6 +426,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="CBHDashboard.aspx.cs">
+      <DependentUpon>CBHDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CBHDashboard.aspx.designer.cs">
+      <DependentUpon>CBHDashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ProjectDashboard.aspx.cs">
       <DependentUpon>ProjectDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -440,12 +440,12 @@
     <Compile Include="ProjectDashboard.aspx.designer.cs">
       <DependentUpon>ProjectDashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="projectproposal.aspx.cs">
-      <DependentUpon>projectproposal.aspx</DependentUpon>
+    <Compile Include="ProjectProposal.aspx.cs">
+      <DependentUpon>ProjectProposal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="projectproposal.aspx.designer.cs">
-      <DependentUpon>projectproposal.aspx</DependentUpon>
+    <Compile Include="ProjectProposal.aspx.designer.cs">
+      <DependentUpon>ProjectProposal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
