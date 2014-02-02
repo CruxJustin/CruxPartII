@@ -13,15 +13,6 @@ namespace LotBankingCrux_v_1.Account {
     public partial class Login {
         
         /// <summary>
-        /// RegisterHyperLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink RegisterHyperLink;
-        
-        /// <summary>
         /// LoginForm control.
         /// </summary>
         /// <remarks>

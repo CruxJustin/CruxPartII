@@ -13,16 +13,10 @@ namespace LotBankingCrux_v_1.Account
     public partial class Login : Page
     {
         CruxDB dbObject = new CruxDB();
-       
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            RegisterHyperLink.NavigateUrl = "Register";
 
-            var returnUrl = HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
-            if (!String.IsNullOrEmpty(returnUrl))
-            {
-                RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
-            }
         }
 
         protected void Login_Click(object sender, EventArgs e)

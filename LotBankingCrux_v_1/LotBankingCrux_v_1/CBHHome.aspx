@@ -19,7 +19,5 @@
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
 
-    <iframe id="MyIFrame" runat="server" scrolling="auto" width="100%" height="768px" frameborder="0"></iframe>
-
 
 </asp:Content>
