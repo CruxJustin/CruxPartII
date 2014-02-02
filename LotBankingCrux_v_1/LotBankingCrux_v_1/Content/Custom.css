@@ -1,0 +1,9 @@
+﻿/*--- Custom CSS for RegistrationComplete.aspx ---*/
+#RC-H1 {
+    color: blue;
+}
+
+/*--- Custom CSS for Registration.aspx ---*/
+#R-DDL {
+    color: red;
+}
