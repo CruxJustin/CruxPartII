@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="projectproposal.aspx.cs" Inherits="LotBankingCrux_v_1.projectproposal" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ProjectProposal.aspx.cs" Inherits="LotBankingCrux_v_1.projectproposal" %>
 
 <!DOCTYPE html>
 

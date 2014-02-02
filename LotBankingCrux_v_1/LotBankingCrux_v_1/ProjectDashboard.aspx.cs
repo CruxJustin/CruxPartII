@@ -13,5 +13,11 @@ namespace LotBankingCrux_v_1
         {
 
         }
+
+        protected void LotTakeDown_OnClick(object sender, EventArgs e)
+        {
+            //Link to the takedown page based on the project we are on
+            Response.Redirect("");
+        }
     }
 }
